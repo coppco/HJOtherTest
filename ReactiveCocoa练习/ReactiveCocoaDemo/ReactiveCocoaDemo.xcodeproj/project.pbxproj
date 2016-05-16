@@ -17,7 +17,7 @@
 		CC1CA6CF1CE5A432000F1BE2 /* ReactiveCocoaDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1CA6CE1CE5A432000F1BE2 /* ReactiveCocoaDemoUITests.m */; };
 		CC1CA6DE1CE5AC52000F1BE2 /* NSObject+Caculator.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1CA6DD1CE5AC52000F1BE2 /* NSObject+Caculator.m */; };
 		CC1CA6E11CE5AC84000F1BE2 /* CaculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1CA6E01CE5AC84000F1BE2 /* CaculatorMaker.m */; };
-		FDF902287439F72C8F2242BD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D00408798956655E7B072C /* libPods.a */; };
+		DC113B7D54A22C00331C48A5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F33F41C41369853116337A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11D00408798956655E7B072C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		08F33F41C41369853116337A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF47B1323FFFE67C2B2A70E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B171A18160B8008D3D64711B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CC1CA6A61CE5A432000F1BE2 /* ReactiveCocoaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDF902287439F72C8F2242BD /* libPods.a in Frameworks */,
+				DC113B7D54A22C00331C48A5 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +93,7 @@
 		A105EF96E13BDA757AC4B9C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				11D00408798956655E7B072C /* libPods.a */,
+				08F33F41C41369853116337A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

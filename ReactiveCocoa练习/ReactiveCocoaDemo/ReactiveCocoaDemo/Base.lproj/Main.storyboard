@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Guw-Bj-rTV">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Guw-Bj-rTV">
                                 <rect key="frame" x="50" y="114" width="500" height="30"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.53297413793103443" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -27,13 +27,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ii-b5-KkQ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6Ii-b5-KkQ">
                                 <rect key="frame" x="50" y="164" width="500" height="30"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.53297413790000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dvo-K9-MzU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dvo-K9-MzU">
                                 <rect key="frame" x="50" y="214" width="500" height="30"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.53297413790000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -52,14 +52,23 @@
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="注册"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfv-tv-pRZ">
+                                <rect key="frame" x="50" y="274" width="500" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Guw-Bj-rTV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="0Le-cS-Ydw"/>
+                            <constraint firstItem="Rfv-tv-pRZ" firstAttribute="height" secondItem="dvo-K9-MzU" secondAttribute="height" id="0e5-2h-Bxi"/>
                             <constraint firstItem="z1W-xj-JdQ" firstAttribute="leading" secondItem="bEl-6A-G7Q" secondAttribute="trailing" constant="50" id="3om-4y-GlS"/>
+                            <constraint firstItem="Rfv-tv-pRZ" firstAttribute="top" secondItem="dvo-K9-MzU" secondAttribute="bottom" constant="30" id="43L-d9-9OH"/>
                             <constraint firstItem="z1W-xj-JdQ" firstAttribute="width" secondItem="bEl-6A-G7Q" secondAttribute="width" id="Bf5-51-Y3h"/>
                             <constraint firstItem="z1W-xj-JdQ" firstAttribute="height" secondItem="bEl-6A-G7Q" secondAttribute="height" id="ERs-02-9WE"/>
                             <constraint firstItem="Guw-Bj-rTV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="GaT-3H-V2I"/>
+                            <constraint firstItem="Rfv-tv-pRZ" firstAttribute="trailing" secondItem="dvo-K9-MzU" secondAttribute="trailing" id="Ge1-SK-dNy"/>
                             <constraint firstItem="dvo-K9-MzU" firstAttribute="height" secondItem="Guw-Bj-rTV" secondAttribute="height" id="NYR-mq-DFV"/>
                             <constraint firstItem="z1W-xj-JdQ" firstAttribute="top" secondItem="bEl-6A-G7Q" secondAttribute="top" id="QB4-PZ-VgC"/>
                             <constraint firstItem="dvo-K9-MzU" firstAttribute="width" secondItem="Guw-Bj-rTV" secondAttribute="width" id="QbN-H2-3k1"/>
@@ -69,13 +78,27 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bEl-6A-G7Q" secondAttribute="bottom" constant="80" id="ebM-oR-s6u"/>
                             <constraint firstAttribute="trailingMargin" secondItem="z1W-xj-JdQ" secondAttribute="trailing" constant="50" id="l0B-ZY-8LS"/>
                             <constraint firstItem="6Ii-b5-KkQ" firstAttribute="leading" secondItem="Guw-Bj-rTV" secondAttribute="leading" id="lUu-WI-DPf"/>
+                            <constraint firstItem="Rfv-tv-pRZ" firstAttribute="leading" secondItem="dvo-K9-MzU" secondAttribute="leading" id="nrp-0Z-dP0"/>
                             <constraint firstItem="6Ii-b5-KkQ" firstAttribute="height" secondItem="Guw-Bj-rTV" secondAttribute="height" id="o0h-m1-ti4"/>
                             <constraint firstItem="6Ii-b5-KkQ" firstAttribute="top" secondItem="Guw-Bj-rTV" secondAttribute="bottom" constant="20" id="v9d-LA-c9P"/>
                             <constraint firstItem="6Ii-b5-KkQ" firstAttribute="width" secondItem="Guw-Bj-rTV" secondAttribute="width" id="xC2-z6-kta"/>
                             <constraint firstItem="dvo-K9-MzU" firstAttribute="leading" secondItem="Guw-Bj-rTV" secondAttribute="leading" id="xxV-hl-gpW"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0e5-2h-Bxi"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="ReactiveCocoa基本使用" id="CYa-pC-rNh"/>
+                    <connections>
+                        <outlet property="descriptL" destination="Rfv-tv-pRZ" id="NbY-aq-GJS"/>
+                        <outlet property="loginB" destination="bEl-6A-G7Q" id="efz-HE-rYz"/>
+                        <outlet property="nameL" destination="Guw-Bj-rTV" id="aJt-bw-0ec"/>
+                        <outlet property="passwordL" destination="6Ii-b5-KkQ" id="ypj-PA-8qi"/>
+                        <outlet property="phoneL" destination="dvo-K9-MzU" id="E4o-Vp-NDv"/>
+                        <outlet property="registerB" destination="z1W-xj-JdQ" id="1kk-mh-TcZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

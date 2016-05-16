@@ -23,7 +23,7 @@
 /**
  *  @author XHJ, 16-05-13 16:05:01
  *
- *  减法计算  返回一个block
+ *  减法计算  返回一个block(block  返回值就是自己本身,参数是要操作的数字)
  */
 - (CaculatorMaker *(^)(CGFloat))sub;
 /**

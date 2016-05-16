@@ -14,7 +14,7 @@
 
 #import "NSObject+Caculator.h"
 
-#import <Masonry.h>
-#import <ReactiveCocoa.h>
+#import <Masonry.h> //自动布局
+#import <ReactiveCocoa.h>  //函数响应式编程
 
 #endif /* PrefixPCH_pch */

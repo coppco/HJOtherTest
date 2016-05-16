@@ -1,2 +1,4 @@
-pod 'ReactiveCocoa', '~> 2.5'
+platform :ios, '7.0'
+pod 'ReactiveCocoa', '~> 2.5'# RAC,一个支持响应式编程的库.
 pod 'Masonry', '~> 1.0.0'
+pod 'BlocksKit', '~> 2.2.5'
