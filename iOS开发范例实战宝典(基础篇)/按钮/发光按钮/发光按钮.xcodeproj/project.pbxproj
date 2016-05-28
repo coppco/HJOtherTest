@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		447190291CF953A3008EC2B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 447190281CF953A3008EC2B5 /* main.m */; };
+		4471902C1CF953A3008EC2B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4471902B1CF953A3008EC2B5 /* AppDelegate.m */; };
+		4471902F1CF953A3008EC2B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4471902E1CF953A3008EC2B5 /* ViewController.m */; };
+		447190321CF953A3008EC2B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447190301CF953A3008EC2B5 /* Main.storyboard */; };
+		447190341CF953A3008EC2B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 447190331CF953A3008EC2B5 /* Assets.xcassets */; };
+		447190371CF953A3008EC2B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447190351CF953A3008EC2B5 /* LaunchScreen.storyboard */; };
+		447190421CF953A3008EC2B5 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 447190411CF953A3008EC2B5 /* ____Tests.m */; };
+		4471904D1CF953A3008EC2B5 /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4471904C1CF953A3008EC2B5 /* ____UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4471903E1CF953A3008EC2B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4471901C1CF953A3008EC2B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 447190231CF953A3008EC2B5;
+			remoteInfo = "发光按钮";
+		};
+		447190491CF953A3008EC2B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4471901C1CF953A3008EC2B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 447190231CF953A3008EC2B5;
+			remoteInfo = "发光按钮";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		447190241CF953A3008EC2B5 /* 发光按钮.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "发光按钮.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		447190281CF953A3008EC2B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4471902A1CF953A3008EC2B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4471902B1CF953A3008EC2B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4471902D1CF953A3008EC2B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4471902E1CF953A3008EC2B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		447190311CF953A3008EC2B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		447190331CF953A3008EC2B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		447190361CF953A3008EC2B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		447190381CF953A3008EC2B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4471903D1CF953A3008EC2B5 /* 发光按钮Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "发光按钮Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		447190411CF953A3008EC2B5 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		447190431CF953A3008EC2B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		447190481CF953A3008EC2B5 /* 发光按钮UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "发光按钮UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4471904C1CF953A3008EC2B5 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
+		4471904E1CF953A3008EC2B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		447190211CF953A3008EC2B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4471903A1CF953A3008EC2B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		447190451CF953A3008EC2B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4471901B1CF953A3008EC2B5 = {
+			isa = PBXGroup;
+			children = (
+				447190261CF953A3008EC2B5 /* 发光按钮 */,
+				447190401CF953A3008EC2B5 /* 发光按钮Tests */,
+				4471904B1CF953A3008EC2B5 /* 发光按钮UITests */,
+				447190251CF953A3008EC2B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		447190251CF953A3008EC2B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				447190241CF953A3008EC2B5 /* 发光按钮.app */,
+				4471903D1CF953A3008EC2B5 /* 发光按钮Tests.xctest */,
+				447190481CF953A3008EC2B5 /* 发光按钮UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		447190261CF953A3008EC2B5 /* 发光按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				4471902A1CF953A3008EC2B5 /* AppDelegate.h */,
+				4471902B1CF953A3008EC2B5 /* AppDelegate.m */,
+				4471902D1CF953A3008EC2B5 /* ViewController.h */,
+				4471902E1CF953A3008EC2B5 /* ViewController.m */,
+				447190301CF953A3008EC2B5 /* Main.storyboard */,
+				447190331CF953A3008EC2B5 /* Assets.xcassets */,
+				447190351CF953A3008EC2B5 /* LaunchScreen.storyboard */,
+				447190381CF953A3008EC2B5 /* Info.plist */,
+				447190271CF953A3008EC2B5 /* Supporting Files */,
+			);
+			path = "发光按钮";
+			sourceTree = "<group>";
+		};
+		447190271CF953A3008EC2B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				447190281CF953A3008EC2B5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		447190401CF953A3008EC2B5 /* 发光按钮Tests */ = {
+			isa = PBXGroup;
+			children = (
+				447190411CF953A3008EC2B5 /* ____Tests.m */,
+				447190431CF953A3008EC2B5 /* Info.plist */,
+			);
+			path = "发光按钮Tests";
+			sourceTree = "<group>";
+		};
+		4471904B1CF953A3008EC2B5 /* 发光按钮UITests */ = {
+			isa = PBXGroup;
+			children = (
+				4471904C1CF953A3008EC2B5 /* ____UITests.m */,
+				4471904E1CF953A3008EC2B5 /* Info.plist */,
+			);
+			path = "发光按钮UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		447190231CF953A3008EC2B5 /* 发光按钮 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 447190511CF953A3008EC2B5 /* Build configuration list for PBXNativeTarget "发光按钮" */;
+			buildPhases = (
+				447190201CF953A3008EC2B5 /* Sources */,
+				447190211CF953A3008EC2B5 /* Frameworks */,
+				447190221CF953A3008EC2B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "发光按钮";
+			productName = "发光按钮";
+			productReference = 447190241CF953A3008EC2B5 /* 发光按钮.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4471903C1CF953A3008EC2B5 /* 发光按钮Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 447190541CF953A3008EC2B5 /* Build configuration list for PBXNativeTarget "发光按钮Tests" */;
+			buildPhases = (
+				447190391CF953A3008EC2B5 /* Sources */,
+				4471903A1CF953A3008EC2B5 /* Frameworks */,
+				4471903B1CF953A3008EC2B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4471903F1CF953A3008EC2B5 /* PBXTargetDependency */,
+			);
+			name = "发光按钮Tests";
+			productName = "发光按钮Tests";
+			productReference = 4471903D1CF953A3008EC2B5 /* 发光按钮Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		447190471CF953A3008EC2B5 /* 发光按钮UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 447190571CF953A3008EC2B5 /* Build configuration list for PBXNativeTarget "发光按钮UITests" */;
+			buildPhases = (
+				447190441CF953A3008EC2B5 /* Sources */,
+				447190451CF953A3008EC2B5 /* Frameworks */,
+				447190461CF953A3008EC2B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4471904A1CF953A3008EC2B5 /* PBXTargetDependency */,
+			);
+			name = "发光按钮UITests";
+			productName = "发光按钮UITests";
+			productReference = 447190481CF953A3008EC2B5 /* 发光按钮UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4471901C1CF953A3008EC2B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "M-coppco";
+				TargetAttributes = {
+					447190231CF953A3008EC2B5 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					4471903C1CF953A3008EC2B5 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 447190231CF953A3008EC2B5;
+					};
+					447190471CF953A3008EC2B5 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 447190231CF953A3008EC2B5;
+					};
+				};
+			};
+			buildConfigurationList = 4471901F1CF953A3008EC2B5 /* Build configuration list for PBXProject "发光按钮" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4471901B1CF953A3008EC2B5;
+			productRefGroup = 447190251CF953A3008EC2B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				447190231CF953A3008EC2B5 /* 发光按钮 */,
+				4471903C1CF953A3008EC2B5 /* 发光按钮Tests */,
+				447190471CF953A3008EC2B5 /* 发光按钮UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		447190221CF953A3008EC2B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				447190371CF953A3008EC2B5 /* LaunchScreen.storyboard in Resources */,
+				447190341CF953A3008EC2B5 /* Assets.xcassets in Resources */,
+				447190321CF953A3008EC2B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4471903B1CF953A3008EC2B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		447190461CF953A3008EC2B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		447190201CF953A3008EC2B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4471902F1CF953A3008EC2B5 /* ViewController.m in Sources */,
+				4471902C1CF953A3008EC2B5 /* AppDelegate.m in Sources */,
+				447190291CF953A3008EC2B5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		447190391CF953A3008EC2B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				447190421CF953A3008EC2B5 /* ____Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		447190441CF953A3008EC2B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4471904D1CF953A3008EC2B5 /* ____UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4471903F1CF953A3008EC2B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 447190231CF953A3008EC2B5 /* 发光按钮 */;
+			targetProxy = 4471903E1CF953A3008EC2B5 /* PBXContainerItemProxy */;
+		};
+		4471904A1CF953A3008EC2B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 447190231CF953A3008EC2B5 /* 发光按钮 */;
+			targetProxy = 447190491CF953A3008EC2B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		447190301CF953A3008EC2B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				447190311CF953A3008EC2B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		447190351CF953A3008EC2B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				447190361CF953A3008EC2B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4471904F1CF953A3008EC2B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		447190501CF953A3008EC2B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		447190521CF953A3008EC2B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "发光按钮/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "M-coppco.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		447190531CF953A3008EC2B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "发光按钮/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "M-coppco.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		447190551CF953A3008EC2B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "发光按钮Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "M-coppco.----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/发光按钮.app/发光按钮";
+			};
+			name = Debug;
+		};
+		447190561CF953A3008EC2B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "发光按钮Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "M-coppco.----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/发光按钮.app/发光按钮";
+			};
+			name = Release;
+		};
+		447190581CF953A3008EC2B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "发光按钮UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "M-coppco.----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "发光按钮";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		447190591CF953A3008EC2B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "发光按钮UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "M-coppco.----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "发光按钮";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4471901F1CF953A3008EC2B5 /* Build configuration list for PBXProject "发光按钮" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4471904F1CF953A3008EC2B5 /* Debug */,
+				447190501CF953A3008EC2B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		447190511CF953A3008EC2B5 /* Build configuration list for PBXNativeTarget "发光按钮" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				447190521CF953A3008EC2B5 /* Debug */,
+				447190531CF953A3008EC2B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		447190541CF953A3008EC2B5 /* Build configuration list for PBXNativeTarget "发光按钮Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				447190551CF953A3008EC2B5 /* Debug */,
+				447190561CF953A3008EC2B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		447190571CF953A3008EC2B5 /* Build configuration list for PBXNativeTarget "发光按钮UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				447190581CF953A3008EC2B5 /* Debug */,
+				447190591CF953A3008EC2B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4471901C1CF953A3008EC2B5 /* Project object */;
+}
