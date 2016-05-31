@@ -27,7 +27,10 @@ typedef NS_ENUM(NSInteger, HJRotationImageType)  {
 @property (nonatomic, strong)CABasicAnimation *rotationAnimation;
 @end
 @implementation HJRotationImage
-
+//移除通知
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -43,6 +46,11 @@ typedef NS_ENUM(NSInteger, HJRotationImageType)  {
     return self;
 }
 - (void)configSubView {
+    //监听进入前台和后台
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willEnterForegroundNotification) name:UIApplicationWillEnterForegroundNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    
     self.isRotation = NO;
     self.type = HJRotationImageTypeNone;
     
@@ -55,7 +63,7 @@ typedef NS_ENUM(NSInteger, HJRotationImageType)  {
     self.rotationAnimation.repeatCount = MAXFLOAT;
     self.rotationAnimation.cumulative = NO;
     self.rotationAnimation.duration = 20; //动画持续时间  越小动画转的越快
-    self.rotationAnimation.removedOnCompletion = NO;  //动画完成后不结束,这个属性很重要,不写切换home返回会,动画不再动了
+    self.rotationAnimation.removedOnCompletion = NO;  //动画完成后不移除,这个属性很重要,为YES的时候切换home返回,动画不再动了
 
     [self.imageV.layer addAnimation:self.rotationAnimation forKey:@"Rotation"]; //图片layer添加动画
     self.layer.speed = 0; //通过控制
@@ -70,15 +78,9 @@ typedef NS_ENUM(NSInteger, HJRotationImageType)  {
     self.layer.beginTime = 0.0;
     CFTimeInterval timeSincePause = [self.layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
     self.layer.beginTime = timeSincePause;
-    NSLog(@"%f", [self.layer convertTime:CACurrentMediaTime() fromLayer:nil]);
-    
-    //监听进入前台和后台
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
 }
 //前台
-- (void)willEnterForeground {
+- (void)willEnterForegroundNotification {
     if (self.type == HJRotationImageTypeRotation) {
         [self startRotation];
     }
@@ -88,10 +90,10 @@ typedef NS_ENUM(NSInteger, HJRotationImageType)  {
 - (void)didEnterBackground {
     if ([self isRotation]) {
         self.type = HJRotationImageTypeRotation;
-        [self stopRotation];
     } else {
         self.type = HJRotationImageTypeStop;
     }
+    [self stopRotation];
 }
 - (void)stopRotation {
     self.isRotation = NO;

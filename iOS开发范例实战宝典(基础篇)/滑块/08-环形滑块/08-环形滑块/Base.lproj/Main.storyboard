@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfV-hQ-suN" customClass="HJCircleSlider">
+                                <rect key="frame" x="50" y="50" width="500" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UfV-hQ-suN" secondAttribute="height" multiplier="1:1" id="Acx-2H-ry8"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前的值 : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ws2-aa-Qmv">
+                                <rect key="frame" x="50" y="-30" width="215" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rru-Iz-JUY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbT-1B-ZAH">
+                                <rect key="frame" x="315" y="-30" width="215" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HbT-1B-ZAH" firstAttribute="leading" secondItem="Ws2-aa-Qmv" secondAttribute="trailing" constant="50" id="4CD-M0-43Q"/>
+                            <constraint firstItem="HbT-1B-ZAH" firstAttribute="top" secondItem="Ws2-aa-Qmv" secondAttribute="top" id="Gwx-I4-FRM"/>
+                            <constraint firstItem="HbT-1B-ZAH" firstAttribute="width" secondItem="Ws2-aa-Qmv" secondAttribute="width" id="Wie-tY-Wlm"/>
+                            <constraint firstAttribute="trailing" secondItem="UfV-hQ-suN" secondAttribute="trailing" constant="50" id="YdF-OQ-ZDN"/>
+                            <constraint firstItem="UfV-hQ-suN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aqt-Bl-6zK"/>
+                            <constraint firstItem="UfV-hQ-suN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="f8J-jH-nAH"/>
+                            <constraint firstItem="UfV-hQ-suN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iuS-L7-tgT"/>
+                            <constraint firstItem="HbT-1B-ZAH" firstAttribute="height" secondItem="Ws2-aa-Qmv" secondAttribute="height" id="jE8-KH-SN6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HbT-1B-ZAH" secondAttribute="trailing" constant="50" id="l3i-Nw-71s"/>
+                            <constraint firstItem="Ws2-aa-Qmv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="l6P-eJ-CBi"/>
+                            <constraint firstItem="UfV-hQ-suN" firstAttribute="top" secondItem="Ws2-aa-Qmv" secondAttribute="bottom" constant="50" id="sFT-jp-srU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="UfV-hQ-suN" id="E9Z-vU-xqt"/>
+                        <outlet property="valueLabel" destination="HbT-1B-ZAH" id="wBq-oz-xye"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="314" y="338"/>
+        </scene>
+    </scenes>
+</document>
