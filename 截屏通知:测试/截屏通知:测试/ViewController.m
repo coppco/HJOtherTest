@@ -9,10 +9,12 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *screen;
 
 @end
 
 @implementation ViewController
+static int i = 1;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,7 +23,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (void)takeScreenshot:(NSNotification *)notification {
-    NSLog(@"%@", notification);
+    self.screen.text = [NSString stringWithFormat:@"%d", i++];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

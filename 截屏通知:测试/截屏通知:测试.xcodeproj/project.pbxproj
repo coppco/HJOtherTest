@@ -207,7 +207,7 @@
 				TargetAttributes = {
 					CC223AF71CF84A3F002DE5DD = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 5NMBANXMBJ;
+						DevelopmentTeam = 3Y92XXLNT8;
 					};
 					CC223B101CF84A3F002DE5DD = {
 						CreatedOnToolsVersion = 7.2;
@@ -418,7 +418,7 @@
 				INFOPLIST_FILE = "截屏通知:测试/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.coppco.UIApplicationUserDidTakeScreenshotNotification;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coppco1.UIApplicationUserDidTakeScreenshotNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -431,7 +431,7 @@
 				INFOPLIST_FILE = "截屏通知:测试/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.coppco.UIApplicationUserDidTakeScreenshotNotification;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coppco1.UIApplicationUserDidTakeScreenshotNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -503,6 +503,7 @@
 				CC223B271CF84A3F002DE5DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC223B281CF84A3F002DE5DD /* Build configuration list for PBXNativeTarget "截屏通知:测试Tests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +512,7 @@
 				CC223B2A1CF84A3F002DE5DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC223B2B1CF84A3F002DE5DD /* Build configuration list for PBXNativeTarget "截屏通知:测试UITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +521,7 @@
 				CC223B2D1CF84A3F002DE5DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
