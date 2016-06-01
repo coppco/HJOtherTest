@@ -100,7 +100,7 @@ typedef NS_ENUM(NSInteger, HJRotationImageType)  {
 
     //pause
     CFTimeInterval pausedTime = [self.layer convertTime:CACurrentMediaTime() fromLayer:nil];
-    self.layer.speed = 0.0;
+    self.layer.speed = 0.0;  //设置speed 为 零 就会暂停一个layer,  然后把timeOffset 设置为合适的时间
     self.layer.timeOffset = pausedTime;
 }
 - (void)layoutSubviews {
