@@ -14,6 +14,9 @@
 @end
 
 @implementation ViewController
+- (IBAction)valueChanged:(UISlider *)sender {
+    self.ring.progress = sender.value;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

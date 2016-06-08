@@ -36,18 +36,19 @@
     [self.layer addSublayer:self.trackLayer];
     
     self.progressLayer = [CAShapeLayer layer];
+    self.progressLayer.fillColor = nil;
     _progressLayer.lineCap = kCALineCapRound;
     [self.layer addSublayer:self.progressLayer];
     
     self.progressTintColor = [UIColor orangeColor];
     self.trackTintColor = [UIColor grayColor];
-    self.progress = 0;
-    self.progressWidth = 5;
+    self.trackLayer.fillColor = nil;
+    self.progress = 0.1;
+    self.progressWidth = 25;
 }
 
 - (void)setTrack
 {
-    NSLog(@"%@", NSStringFromCGPoint(CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2)));
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2) radius:(self.bounds.size.width - _progressWidth)/ 2 startAngle:0 endAngle:M_PI * 2 clockwise:YES];;
     self.trackLayer.path = path.CGPath;
 }
@@ -77,12 +78,25 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    if (CGRectEqualToRect(self.frame, CGRectZero)) {
+        return;
+    }
     self.progressLayer.frame = self.bounds;
     self.trackLayer.frame = self.bounds;
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2) radius:(self.bounds.size.width - _progressWidth)/ 2 startAngle:0 endAngle:M_PI * 2 clockwise:YES];;
+    self.trackLayer.path = path.CGPath;
+
+    UIBezierPath *path1  = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2) radius:(self.bounds.size.width - _progressWidth)/ 2 startAngle:- M_PI_2 endAngle:(M_PI * 2) * _progress - M_PI_2 clockwise:YES];
+    _progressLayer.path = path1.CGPath;
+    
 }
 - (void)setProgress:(CGFloat)progress {
     _progress = progress;
     
     [self setProgress];
+}
+- (void)setProgress:(CGFloat)progress animation:(BOOL)animation {
+    
 }
 @end

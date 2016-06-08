@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  UITableVlewDemo
+//
+//  Created by 陆巧怡 on 15/10/19.
+//  Copyright © 2015年 Simon. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <Masonry/Masonry.h>
+#import "UITableView+FDTemplateLayoutCell.h"
+#import "TableViewModel.h"
+#import "TopGroupView.h"
+#import "MidGroupView.h"
+#import "UnderGroupView.h"
+#endif /* PrefixHeader_pch */

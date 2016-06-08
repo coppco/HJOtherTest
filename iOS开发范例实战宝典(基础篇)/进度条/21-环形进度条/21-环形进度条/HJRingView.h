@@ -21,4 +21,6 @@
 /**进度条宽度*/
 @property (nonatomic, assign)CGFloat progressWidth;
 
+- (void)setProgress:(CGFloat)progress animation:(BOOL)animation;
+
 @end
