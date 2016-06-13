@@ -41,6 +41,9 @@
 }
 #pragma - mark - tap手势
 - (void)tap:(UITapGestureRecognizer *)tap {
+    
+    //更新约束可以写在updateViewConstraints,这是苹果推荐的方式,这里也可以不写在里面,使用另外的方法
+    /*
         _isExpanded = !_isExpanded;
     // 告诉self.view约束需要更新
     [self.view setNeedsUpdateConstraints];
@@ -50,7 +53,54 @@
     [UIView animateWithDuration:0.4 animations:^{
         [self.view layoutIfNeeded];
     }];
+     */
+    [self updateWithExpand:!self.isExpanded animated:YES];
 }
+
+
+
+- (void)updateWithExpand:(BOOL)isExpanded animated:(BOOL)animated {
+    self.isExpanded = isExpanded;
+    
+    [self.redView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.top.mas_equalTo(20);
+        make.right.mas_equalTo(-20);
+        if (_isExpanded) {
+            make.bottom.mas_equalTo(-20);
+        } else {
+            make.bottom.mas_equalTo(-300);
+        }
+    }];
+    
+    [self.blueView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.redView);
+        
+        // 这里使用优先级处理
+        // 设置其最大值为250，最小值为90
+        if (!_isExpanded) {
+            make.width.height.mas_equalTo(100 * 0.5).priorityLow();
+        } else {
+            make.width.height.mas_equalTo(100 * 3).priorityLow();
+        }
+        
+        // 最大值为250
+        make.width.height.lessThanOrEqualTo(@250);
+        
+        // 最小值为90
+        make.width.height.greaterThanOrEqualTo(@90);
+    }];
+    
+    if (animated) {
+        [self.view setNeedsUpdateConstraints];
+        [self.view updateConstraintsIfNeeded];
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            [self.view layoutIfNeeded];
+        }];
+    }
+}
+
+/*
 - (void)updateViewConstraints {
     
     [self.redView mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -82,6 +132,7 @@
     }];
     [super updateViewConstraints];
 }
+ */
 /*
 #pragma mark - Navigation
 
