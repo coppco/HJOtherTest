@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		443F1C551D161F98002C9250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F1C541D161F98002C9250 /* AppDelegate.swift */; };
+		443F1C571D161F98002C9250 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F1C561D161F98002C9250 /* ViewController.swift */; };
+		443F1C5A1D161F98002C9250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443F1C581D161F98002C9250 /* Main.storyboard */; };
+		443F1C5C1D161F98002C9250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443F1C5B1D161F98002C9250 /* Assets.xcassets */; };
+		443F1C5F1D161F98002C9250 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443F1C5D1D161F98002C9250 /* LaunchScreen.storyboard */; };
+		443F1C6A1D161F98002C9250 /* __1__________Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F1C691D161F98002C9250 /* __1__________Tests.swift */; };
+		443F1C751D161F98002C9250 /* __1__________UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F1C741D161F98002C9250 /* __1__________UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		443F1C661D161F98002C9250 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 443F1C491D161F98002C9250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 443F1C501D161F98002C9250;
+			remoteInfo = "2.1__搭建计算器的界面";
+		};
+		443F1C711D161F98002C9250 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 443F1C491D161F98002C9250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 443F1C501D161F98002C9250;
+			remoteInfo = "2.1__搭建计算器的界面";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		443F1C511D161F98002C9250 /* 2.1__搭建计算器的界面.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2.1__搭建计算器的界面.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		443F1C541D161F98002C9250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		443F1C561D161F98002C9250 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		443F1C591D161F98002C9250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		443F1C5B1D161F98002C9250 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		443F1C5E1D161F98002C9250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		443F1C601D161F98002C9250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		443F1C651D161F98002C9250 /* 2.1__搭建计算器的界面Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2.1__搭建计算器的界面Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		443F1C691D161F98002C9250 /* __1__________Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "__1__________Tests.swift"; sourceTree = "<group>"; };
+		443F1C6B1D161F98002C9250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		443F1C701D161F98002C9250 /* 2.1__搭建计算器的界面UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2.1__搭建计算器的界面UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		443F1C741D161F98002C9250 /* __1__________UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "__1__________UITests.swift"; sourceTree = "<group>"; };
+		443F1C761D161F98002C9250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		443F1C4E1D161F98002C9250 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		443F1C621D161F98002C9250 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		443F1C6D1D161F98002C9250 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		443F1C481D161F98002C9250 = {
+			isa = PBXGroup;
+			children = (
+				443F1C531D161F98002C9250 /* 2.1__搭建计算器的界面 */,
+				443F1C681D161F98002C9250 /* 2.1__搭建计算器的界面Tests */,
+				443F1C731D161F98002C9250 /* 2.1__搭建计算器的界面UITests */,
+				443F1C521D161F98002C9250 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		443F1C521D161F98002C9250 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				443F1C511D161F98002C9250 /* 2.1__搭建计算器的界面.app */,
+				443F1C651D161F98002C9250 /* 2.1__搭建计算器的界面Tests.xctest */,
+				443F1C701D161F98002C9250 /* 2.1__搭建计算器的界面UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		443F1C531D161F98002C9250 /* 2.1__搭建计算器的界面 */ = {
+			isa = PBXGroup;
+			children = (
+				443F1C541D161F98002C9250 /* AppDelegate.swift */,
+				443F1C561D161F98002C9250 /* ViewController.swift */,
+				443F1C581D161F98002C9250 /* Main.storyboard */,
+				443F1C5B1D161F98002C9250 /* Assets.xcassets */,
+				443F1C5D1D161F98002C9250 /* LaunchScreen.storyboard */,
+				443F1C601D161F98002C9250 /* Info.plist */,
+			);
+			path = "2.1__搭建计算器的界面";
+			sourceTree = "<group>";
+		};
+		443F1C681D161F98002C9250 /* 2.1__搭建计算器的界面Tests */ = {
+			isa = PBXGroup;
+			children = (
+				443F1C691D161F98002C9250 /* __1__________Tests.swift */,
+				443F1C6B1D161F98002C9250 /* Info.plist */,
+			);
+			path = "2.1__搭建计算器的界面Tests";
+			sourceTree = "<group>";
+		};
+		443F1C731D161F98002C9250 /* 2.1__搭建计算器的界面UITests */ = {
+			isa = PBXGroup;
+			children = (
+				443F1C741D161F98002C9250 /* __1__________UITests.swift */,
+				443F1C761D161F98002C9250 /* Info.plist */,
+			);
+			path = "2.1__搭建计算器的界面UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		443F1C501D161F98002C9250 /* 2.1__搭建计算器的界面 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 443F1C791D161F98002C9250 /* Build configuration list for PBXNativeTarget "2.1__搭建计算器的界面" */;
+			buildPhases = (
+				443F1C4D1D161F98002C9250 /* Sources */,
+				443F1C4E1D161F98002C9250 /* Frameworks */,
+				443F1C4F1D161F98002C9250 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "2.1__搭建计算器的界面";
+			productName = "2.1__搭建计算器的界面";
+			productReference = 443F1C511D161F98002C9250 /* 2.1__搭建计算器的界面.app */;
+			productType = "com.apple.product-type.application";
+		};
+		443F1C641D161F98002C9250 /* 2.1__搭建计算器的界面Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 443F1C7C1D161F98002C9250 /* Build configuration list for PBXNativeTarget "2.1__搭建计算器的界面Tests" */;
+			buildPhases = (
+				443F1C611D161F98002C9250 /* Sources */,
+				443F1C621D161F98002C9250 /* Frameworks */,
+				443F1C631D161F98002C9250 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				443F1C671D161F98002C9250 /* PBXTargetDependency */,
+			);
+			name = "2.1__搭建计算器的界面Tests";
+			productName = "2.1__搭建计算器的界面Tests";
+			productReference = 443F1C651D161F98002C9250 /* 2.1__搭建计算器的界面Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		443F1C6F1D161F98002C9250 /* 2.1__搭建计算器的界面UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 443F1C7F1D161F98002C9250 /* Build configuration list for PBXNativeTarget "2.1__搭建计算器的界面UITests" */;
+			buildPhases = (
+				443F1C6C1D161F98002C9250 /* Sources */,
+				443F1C6D1D161F98002C9250 /* Frameworks */,
+				443F1C6E1D161F98002C9250 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				443F1C721D161F98002C9250 /* PBXTargetDependency */,
+			);
+			name = "2.1__搭建计算器的界面UITests";
+			productName = "2.1__搭建计算器的界面UITests";
+			productReference = 443F1C701D161F98002C9250 /* 2.1__搭建计算器的界面UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		443F1C491D161F98002C9250 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "M-coppco";
+				TargetAttributes = {
+					443F1C501D161F98002C9250 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					443F1C641D161F98002C9250 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 443F1C501D161F98002C9250;
+					};
+					443F1C6F1D161F98002C9250 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 443F1C501D161F98002C9250;
+					};
+				};
+			};
+			buildConfigurationList = 443F1C4C1D161F98002C9250 /* Build configuration list for PBXProject "2.1__搭建计算器的界面" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 443F1C481D161F98002C9250;
+			productRefGroup = 443F1C521D161F98002C9250 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				443F1C501D161F98002C9250 /* 2.1__搭建计算器的界面 */,
+				443F1C641D161F98002C9250 /* 2.1__搭建计算器的界面Tests */,
+				443F1C6F1D161F98002C9250 /* 2.1__搭建计算器的界面UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		443F1C4F1D161F98002C9250 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				443F1C5F1D161F98002C9250 /* LaunchScreen.storyboard in Resources */,
+				443F1C5C1D161F98002C9250 /* Assets.xcassets in Resources */,
+				443F1C5A1D161F98002C9250 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		443F1C631D161F98002C9250 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		443F1C6E1D161F98002C9250 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		443F1C4D1D161F98002C9250 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				443F1C571D161F98002C9250 /* ViewController.swift in Sources */,
+				443F1C551D161F98002C9250 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		443F1C611D161F98002C9250 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				443F1C6A1D161F98002C9250 /* __1__________Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		443F1C6C1D161F98002C9250 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				443F1C751D161F98002C9250 /* __1__________UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		443F1C671D161F98002C9250 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 443F1C501D161F98002C9250 /* 2.1__搭建计算器的界面 */;
+			targetProxy = 443F1C661D161F98002C9250 /* PBXContainerItemProxy */;
+		};
+		443F1C721D161F98002C9250 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 443F1C501D161F98002C9250 /* 2.1__搭建计算器的界面 */;
+			targetProxy = 443F1C711D161F98002C9250 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		443F1C581D161F98002C9250 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				443F1C591D161F98002C9250 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		443F1C5D1D161F98002C9250 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				443F1C5E1D161F98002C9250 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		443F1C771D161F98002C9250 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		443F1C781D161F98002C9250 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		443F1C7A1D161F98002C9250 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "2.1__搭建计算器的界面/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "M-coppco.--1----------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		443F1C7B1D161F98002C9250 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "2.1__搭建计算器的界面/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "M-coppco.--1----------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		443F1C7D1D161F98002C9250 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "2.1__搭建计算器的界面Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "M-coppco.--1----------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/2.1__搭建计算器的界面.app/2.1__搭建计算器的界面";
+			};
+			name = Debug;
+		};
+		443F1C7E1D161F98002C9250 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "2.1__搭建计算器的界面Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "M-coppco.--1----------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/2.1__搭建计算器的界面.app/2.1__搭建计算器的界面";
+			};
+			name = Release;
+		};
+		443F1C801D161F98002C9250 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "2.1__搭建计算器的界面UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "M-coppco.--1----------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "2.1__搭建计算器的界面";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		443F1C811D161F98002C9250 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "2.1__搭建计算器的界面UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "M-coppco.--1----------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "2.1__搭建计算器的界面";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		443F1C4C1D161F98002C9250 /* Build configuration list for PBXProject "2.1__搭建计算器的界面" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				443F1C771D161F98002C9250 /* Debug */,
+				443F1C781D161F98002C9250 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		443F1C791D161F98002C9250 /* Build configuration list for PBXNativeTarget "2.1__搭建计算器的界面" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				443F1C7A1D161F98002C9250 /* Debug */,
+				443F1C7B1D161F98002C9250 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		443F1C7C1D161F98002C9250 /* Build configuration list for PBXNativeTarget "2.1__搭建计算器的界面Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				443F1C7D1D161F98002C9250 /* Debug */,
+				443F1C7E1D161F98002C9250 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		443F1C7F1D161F98002C9250 /* Build configuration list for PBXNativeTarget "2.1__搭建计算器的界面UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				443F1C801D161F98002C9250 /* Debug */,
+				443F1C811D161F98002C9250 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 443F1C491D161F98002C9250 /* Project object */;
+}
