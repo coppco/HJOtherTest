@@ -15,7 +15,6 @@
 		CC7542CC1D1BD893001EC796 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7542CA1D1BD893001EC796 /* LaunchScreen.storyboard */; };
 		CC7542D71D1BD893001EC796 /* HJNavigationAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7542D61D1BD893001EC796 /* HJNavigationAnimationTests.m */; };
 		CC7542E21D1BD893001EC796 /* HJNavigationAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7542E11D1BD893001EC796 /* HJNavigationAnimationUITests.m */; };
-		CC7542F11D1BE671001EC796 /* HJDDD.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7542F01D1BE671001EC796 /* HJDDD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +51,6 @@
 		CC7542DD1D1BD893001EC796 /* HJNavigationAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HJNavigationAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7542E11D1BD893001EC796 /* HJNavigationAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJNavigationAnimationUITests.m; sourceTree = "<group>"; };
 		CC7542E31D1BD893001EC796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC7542EF1D1BE671001EC796 /* HJDDD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJDDD.h; sourceTree = "<group>"; };
-		CC7542F01D1BE671001EC796 /* HJDDD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJDDD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +105,6 @@
 				CC7542C01D1BD893001EC796 /* AppDelegate.m */,
 				CC7542C21D1BD893001EC796 /* ViewController.h */,
 				CC7542C31D1BD893001EC796 /* ViewController.m */,
-				CC7542EF1D1BE671001EC796 /* HJDDD.h */,
-				CC7542F01D1BE671001EC796 /* HJDDD.m */,
 				CC7542C51D1BD893001EC796 /* Main.storyboard */,
 				CC7542C81D1BD893001EC796 /* Assets.xcassets */,
 				CC7542CA1D1BD893001EC796 /* LaunchScreen.storyboard */,
@@ -275,7 +270,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC7542F11D1BE671001EC796 /* HJDDD.m in Sources */,
 				CC7542C41D1BD893001EC796 /* ViewController.m in Sources */,
 				CC7542C11D1BD893001EC796 /* AppDelegate.m in Sources */,
 				CC7542BE1D1BD893001EC796 /* main.m in Sources */,
@@ -506,6 +500,7 @@
 				CC7542E81D1BD893001EC796 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC7542E91D1BD893001EC796 /* Build configuration list for PBXNativeTarget "HJNavigationAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +509,7 @@
 				CC7542EB1D1BD893001EC796 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC7542EC1D1BD893001EC796 /* Build configuration list for PBXNativeTarget "HJNavigationAnimationUITests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +518,7 @@
 				CC7542EE1D1BD893001EC796 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
