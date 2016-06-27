@@ -45,6 +45,25 @@ var f:Int? = nil
 f = 100
 
 var g:String! = nil
-g = "123"
+g = "gg"
 
-g = str + "12"
+//g = str + "12"
+
+//拆包
+print(f)
+print(f! + 10)
+print(g! + "121")
+
+func divide(n1:Int, n2: Int)->Double? {
+    if n2 == 0  {
+        return nil
+    }
+    return Double(n1) / Double(n2)
+}
+
+if let result = divide(200, n2: 0) {
+    print("success:\(result)")
+} else {
+//    print(result);  //编译错误
+    print("failure");
+}
