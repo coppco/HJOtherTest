@@ -98,5 +98,20 @@ opt1 = calculate("-")
 
 opt1(21, 10)
 
+//闭包
+    {(参数1:String, 参数2:String) ->String(返回值) in
+        语句组
+}
+func calculate11(type:String) -> (Int, Int) ->Int {
+    var result:(Int, Int)->Int
+    switch type {
+    case "+": result = {(a:Int, b:Int)->Int in return a + b}
+    case "-": result = {(a, b) in return a - b}
+    default : result = {a, b in return a + b}
+    }
+    return result
+}
+
+calculate11(".")(10, 12)
 
 
