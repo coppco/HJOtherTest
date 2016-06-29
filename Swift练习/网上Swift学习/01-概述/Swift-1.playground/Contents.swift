@@ -77,4 +77,63 @@ let nickName : String? = nil
 let fullName : String = "John Appl"
 let informalGreeting = "Hi \(nickName ?? fullName)"
 
+//计算平均值的函数
+func average(items:Int...)->Double {
+    var result:Double = 0
+    for item in items {
+        result += Double(item)
+    }
+    return result / Double(items.count)
+}
+
+//使用闭包
+let averageClosure:(Int...)->Double = { (items:Int...) in
+    var result :Double = 0
+    for item in items where item >= 7 { //使用where关键字 设置过滤条件
+        result += Double(item)
+    }
+    return result / Double(items.count)
+}
+let averageClosure1:([Int]->Double) = { array in
+    var result :Double = 0
+    for item in array {
+        result += Double(item)
+    }
+    return result / Double(array.count)
+}
+averageClosure1([1,2,3,4,5,6])
+averageClosure(1,2,3,4,5,6,11,11,11,11,11)
+average(1,2,3,4,5,6, 7, 8, 9, 10, 11)
+
+var numbers = [20, 19, 7, 12]
+2
+3
+4
+5
+numbers.map({
+    (number: Int) -> Int in
+    let result = 3 * number
+    return result
+})
+
+numbers.map({ (number:Int) -> Int in
+    let result = number * 9
+    return result
+})
+print(numbers)
+
+
+class Person {
+    var job:String?
+    var name:String!
+    let age:Int = 21
+    
+    func jobed(job:String) {
+        self.job = job
+    }
+}
+
+let 张三:Person = Person()
+张三.job = "乞讨"
+张三.name = "张三"
 
