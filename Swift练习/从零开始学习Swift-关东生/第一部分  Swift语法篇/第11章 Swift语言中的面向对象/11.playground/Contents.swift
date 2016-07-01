@@ -76,7 +76,7 @@ func !=(a:Department, b:Department)->Bool {
 //类
 class Employee {
     var no:Int = 0
-    var name:String = ""
+    var name:String?
     var job:String?
     var salary:Double = 0
     
@@ -138,11 +138,11 @@ if emp1 === emp2 {
 }
 //自定义类Employee 不能使用==和!=, 需要重载运算符, 通过定义函数的方式实现
 
-if emp1 == emp2 {
-    print("值相同")
-} else {
-    print("值不相同")
-}
+//if emp1 == emp2 {
+//    print("值相同")
+//} else {
+//    print("值不相同")
+//}
 
 var dept1:Department = Department()
 var dept2:Department = Department()
@@ -157,3 +157,24 @@ if dept1 == dept2 {
 } else {
     print("值类型不相同")
 }
+
+struct Blog {
+    var name:String = ""
+}
+var blog = Blog()
+
+
+func isStyleBlog(blog:Blog) {
+    blog.name.isEmpty
+    let a:String? = blog.name
+    guard let _:String? = blog.name else {
+        print("没有名字")
+        return
+    }
+        print("\(blog.name)")
+}
+
+isStyleBlog(blog)
+
+
+
