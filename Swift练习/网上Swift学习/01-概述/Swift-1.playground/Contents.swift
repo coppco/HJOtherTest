@@ -136,3 +136,31 @@ let 张三:Person = Person()
 张三.job = "乞讨"
 张三.name = "张三"
 
+
+class YanFa {
+    var  name:String  {
+        willSet {
+            print(name)
+        }
+    }//存储属性
+    var  age:Int! {
+        didSet {
+            print(age)
+        }
+    }
+    init(name:String, age:Int) {
+        self.name = name
+        self.age = age
+    }
+    var descript:String {  //计算属性,只有getter方法
+        return "name = \(self.name), age = \(self.age)"
+    }
+}
+
+let xhj:YanFa = YanFa(name: "xhj", age: 28)
+xhj.name = "gtm"
+print(xhj.name)
+
+print(xhj.descript)
+
+
