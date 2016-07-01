@@ -78,14 +78,13 @@ let fullName : String = "John Appl"
 let informalGreeting = "Hi \(nickName ?? fullName)"
 
 //计算平均值的函数
-func average(items:Int...)->Double {
+func average(_ items:Int...)->Double {
     var result:Double = 0
     for item in items {
         result += Double(item)
     }
     return result / Double(items.count)
 }
-
 //使用闭包
 let averageClosure:(Int...)->Double = { (items:Int...) in
     var result :Double = 0
@@ -94,7 +93,7 @@ let averageClosure:(Int...)->Double = { (items:Int...) in
     }
     return result / Double(items.count)
 }
-let averageClosure1:([Int]->Double) = { array in
+let averageClosure1:[Int]->Double = { array in
     var result :Double = 0
     for item in array {
         result += Double(item)
