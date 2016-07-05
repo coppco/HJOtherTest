@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC763B611D2B491A00F80EF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763B601D2B491A00F80EF8 /* AppDelegate.swift */; };
+		CC763B631D2B491A00F80EF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763B621D2B491A00F80EF8 /* ViewController.swift */; };
+		CC763B661D2B491A00F80EF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC763B641D2B491A00F80EF8 /* Main.storyboard */; };
+		CC763B681D2B491A00F80EF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC763B671D2B491A00F80EF8 /* Assets.xcassets */; };
+		CC763B6B1D2B491A00F80EF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC763B691D2B491A00F80EF8 /* LaunchScreen.storyboard */; };
+		CC763B761D2B491A00F80EF8 /* __4______CIDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763B751D2B491A00F80EF8 /* __4______CIDetectorTests.swift */; };
+		CC763B811D2B491A00F80EF8 /* __4______CIDetectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763B801D2B491A00F80EF8 /* __4______CIDetectorUITests.swift */; };
+		CC763B8F1D2B61D900F80EF8 /* HJImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763B8E1D2B61D900F80EF8 /* HJImageCell.swift */; };
+		CC763B911D2B6A3500F80EF8 /* 第五届索尔维会议.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC763B901D2B6A3500F80EF8 /* 第五届索尔维会议.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC763B721D2B491A00F80EF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC763B551D2B491A00F80EF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC763B5C1D2B491A00F80EF8;
+			remoteInfo = "3.4__人脸识别CIDetector";
+		};
+		CC763B7D1D2B491A00F80EF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC763B551D2B491A00F80EF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC763B5C1D2B491A00F80EF8;
+			remoteInfo = "3.4__人脸识别CIDetector";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC763B5D1D2B491A00F80EF8 /* 3.4__人脸识别CIDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3.4__人脸识别CIDetector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC763B601D2B491A00F80EF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC763B621D2B491A00F80EF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC763B651D2B491A00F80EF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC763B671D2B491A00F80EF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC763B6A1D2B491A00F80EF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC763B6C1D2B491A00F80EF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC763B711D2B491A00F80EF8 /* 3.4__人脸识别CIDetectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "3.4__人脸识别CIDetectorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC763B751D2B491A00F80EF8 /* __4______CIDetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "__4______CIDetectorTests.swift"; sourceTree = "<group>"; };
+		CC763B771D2B491A00F80EF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC763B7C1D2B491A00F80EF8 /* 3.4__人脸识别CIDetectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "3.4__人脸识别CIDetectorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC763B801D2B491A00F80EF8 /* __4______CIDetectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "__4______CIDetectorUITests.swift"; sourceTree = "<group>"; };
+		CC763B821D2B491A00F80EF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC763B8E1D2B61D900F80EF8 /* HJImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJImageCell.swift; sourceTree = "<group>"; };
+		CC763B901D2B6A3500F80EF8 /* 第五届索尔维会议.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "第五届索尔维会议.jpg"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC763B5A1D2B491A00F80EF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC763B6E1D2B491A00F80EF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC763B791D2B491A00F80EF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC763B541D2B491A00F80EF8 = {
+			isa = PBXGroup;
+			children = (
+				CC763B5F1D2B491A00F80EF8 /* 3.4__人脸识别CIDetector */,
+				CC763B741D2B491A00F80EF8 /* 3.4__人脸识别CIDetectorTests */,
+				CC763B7F1D2B491A00F80EF8 /* 3.4__人脸识别CIDetectorUITests */,
+				CC763B5E1D2B491A00F80EF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC763B5E1D2B491A00F80EF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC763B5D1D2B491A00F80EF8 /* 3.4__人脸识别CIDetector.app */,
+				CC763B711D2B491A00F80EF8 /* 3.4__人脸识别CIDetectorTests.xctest */,
+				CC763B7C1D2B491A00F80EF8 /* 3.4__人脸识别CIDetectorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC763B5F1D2B491A00F80EF8 /* 3.4__人脸识别CIDetector */ = {
+			isa = PBXGroup;
+			children = (
+				CC763B901D2B6A3500F80EF8 /* 第五届索尔维会议.jpg */,
+				CC763B601D2B491A00F80EF8 /* AppDelegate.swift */,
+				CC763B621D2B491A00F80EF8 /* ViewController.swift */,
+				CC763B8E1D2B61D900F80EF8 /* HJImageCell.swift */,
+				CC763B641D2B491A00F80EF8 /* Main.storyboard */,
+				CC763B671D2B491A00F80EF8 /* Assets.xcassets */,
+				CC763B691D2B491A00F80EF8 /* LaunchScreen.storyboard */,
+				CC763B6C1D2B491A00F80EF8 /* Info.plist */,
+			);
+			path = "3.4__人脸识别CIDetector";
+			sourceTree = "<group>";
+		};
+		CC763B741D2B491A00F80EF8 /* 3.4__人脸识别CIDetectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC763B751D2B491A00F80EF8 /* __4______CIDetectorTests.swift */,
+				CC763B771D2B491A00F80EF8 /* Info.plist */,
+			);
+			path = "3.4__人脸识别CIDetectorTests";
+			sourceTree = "<group>";
+		};
+		CC763B7F1D2B491A00F80EF8 /* 3.4__人脸识别CIDetectorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC763B801D2B491A00F80EF8 /* __4______CIDetectorUITests.swift */,
+				CC763B821D2B491A00F80EF8 /* Info.plist */,
+			);
+			path = "3.4__人脸识别CIDetectorUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC763B5C1D2B491A00F80EF8 /* 3.4__人脸识别CIDetector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC763B851D2B491A00F80EF8 /* Build configuration list for PBXNativeTarget "3.4__人脸识别CIDetector" */;
+			buildPhases = (
+				CC763B591D2B491A00F80EF8 /* Sources */,
+				CC763B5A1D2B491A00F80EF8 /* Frameworks */,
+				CC763B5B1D2B491A00F80EF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "3.4__人脸识别CIDetector";
+			productName = "3.4__人脸识别CIDetector";
+			productReference = CC763B5D1D2B491A00F80EF8 /* 3.4__人脸识别CIDetector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC763B701D2B491A00F80EF8 /* 3.4__人脸识别CIDetectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC763B881D2B491A00F80EF8 /* Build configuration list for PBXNativeTarget "3.4__人脸识别CIDetectorTests" */;
+			buildPhases = (
+				CC763B6D1D2B491A00F80EF8 /* Sources */,
+				CC763B6E1D2B491A00F80EF8 /* Frameworks */,
+				CC763B6F1D2B491A00F80EF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC763B731D2B491A00F80EF8 /* PBXTargetDependency */,
+			);
+			name = "3.4__人脸识别CIDetectorTests";
+			productName = "3.4__人脸识别CIDetectorTests";
+			productReference = CC763B711D2B491A00F80EF8 /* 3.4__人脸识别CIDetectorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC763B7B1D2B491A00F80EF8 /* 3.4__人脸识别CIDetectorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC763B8B1D2B491A00F80EF8 /* Build configuration list for PBXNativeTarget "3.4__人脸识别CIDetectorUITests" */;
+			buildPhases = (
+				CC763B781D2B491A00F80EF8 /* Sources */,
+				CC763B791D2B491A00F80EF8 /* Frameworks */,
+				CC763B7A1D2B491A00F80EF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC763B7E1D2B491A00F80EF8 /* PBXTargetDependency */,
+			);
+			name = "3.4__人脸识别CIDetectorUITests";
+			productName = "3.4__人脸识别CIDetectorUITests";
+			productReference = CC763B7C1D2B491A00F80EF8 /* 3.4__人脸识别CIDetectorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC763B551D2B491A00F80EF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = XHJ;
+				TargetAttributes = {
+					CC763B5C1D2B491A00F80EF8 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					CC763B701D2B491A00F80EF8 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = CC763B5C1D2B491A00F80EF8;
+					};
+					CC763B7B1D2B491A00F80EF8 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = CC763B5C1D2B491A00F80EF8;
+					};
+				};
+			};
+			buildConfigurationList = CC763B581D2B491A00F80EF8 /* Build configuration list for PBXProject "3.4__人脸识别CIDetector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC763B541D2B491A00F80EF8;
+			productRefGroup = CC763B5E1D2B491A00F80EF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC763B5C1D2B491A00F80EF8 /* 3.4__人脸识别CIDetector */,
+				CC763B701D2B491A00F80EF8 /* 3.4__人脸识别CIDetectorTests */,
+				CC763B7B1D2B491A00F80EF8 /* 3.4__人脸识别CIDetectorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC763B5B1D2B491A00F80EF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC763B6B1D2B491A00F80EF8 /* LaunchScreen.storyboard in Resources */,
+				CC763B681D2B491A00F80EF8 /* Assets.xcassets in Resources */,
+				CC763B661D2B491A00F80EF8 /* Main.storyboard in Resources */,
+				CC763B911D2B6A3500F80EF8 /* 第五届索尔维会议.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC763B6F1D2B491A00F80EF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC763B7A1D2B491A00F80EF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC763B591D2B491A00F80EF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC763B631D2B491A00F80EF8 /* ViewController.swift in Sources */,
+				CC763B611D2B491A00F80EF8 /* AppDelegate.swift in Sources */,
+				CC763B8F1D2B61D900F80EF8 /* HJImageCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC763B6D1D2B491A00F80EF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC763B761D2B491A00F80EF8 /* __4______CIDetectorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC763B781D2B491A00F80EF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC763B811D2B491A00F80EF8 /* __4______CIDetectorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC763B731D2B491A00F80EF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC763B5C1D2B491A00F80EF8 /* 3.4__人脸识别CIDetector */;
+			targetProxy = CC763B721D2B491A00F80EF8 /* PBXContainerItemProxy */;
+		};
+		CC763B7E1D2B491A00F80EF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC763B5C1D2B491A00F80EF8 /* 3.4__人脸识别CIDetector */;
+			targetProxy = CC763B7D1D2B491A00F80EF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC763B641D2B491A00F80EF8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC763B651D2B491A00F80EF8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC763B691D2B491A00F80EF8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC763B6A1D2B491A00F80EF8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC763B831D2B491A00F80EF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC763B841D2B491A00F80EF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC763B861D2B491A00F80EF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "3.4__人脸识别CIDetector/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.coppco.--4------CIDetector";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CC763B871D2B491A00F80EF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "3.4__人脸识别CIDetector/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.coppco.--4------CIDetector";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CC763B891D2B491A00F80EF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "3.4__人脸识别CIDetectorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.coppco.--4------CIDetectorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3.4__人脸识别CIDetector.app/3.4__人脸识别CIDetector";
+			};
+			name = Debug;
+		};
+		CC763B8A1D2B491A00F80EF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "3.4__人脸识别CIDetectorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.coppco.--4------CIDetectorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3.4__人脸识别CIDetector.app/3.4__人脸识别CIDetector";
+			};
+			name = Release;
+		};
+		CC763B8C1D2B491A00F80EF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "3.4__人脸识别CIDetectorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.coppco.--4------CIDetectorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "3.4__人脸识别CIDetector";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CC763B8D1D2B491A00F80EF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "3.4__人脸识别CIDetectorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.coppco.--4------CIDetectorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "3.4__人脸识别CIDetector";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC763B581D2B491A00F80EF8 /* Build configuration list for PBXProject "3.4__人脸识别CIDetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC763B831D2B491A00F80EF8 /* Debug */,
+				CC763B841D2B491A00F80EF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC763B851D2B491A00F80EF8 /* Build configuration list for PBXNativeTarget "3.4__人脸识别CIDetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC763B861D2B491A00F80EF8 /* Debug */,
+				CC763B871D2B491A00F80EF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC763B881D2B491A00F80EF8 /* Build configuration list for PBXNativeTarget "3.4__人脸识别CIDetectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC763B891D2B491A00F80EF8 /* Debug */,
+				CC763B8A1D2B491A00F80EF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC763B8B1D2B491A00F80EF8 /* Build configuration list for PBXNativeTarget "3.4__人脸识别CIDetectorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC763B8C1D2B491A00F80EF8 /* Debug */,
+				CC763B8D1D2B491A00F80EF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC763B551D2B491A00F80EF8 /* Project object */;
+}

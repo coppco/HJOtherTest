@@ -1,0 +1,21 @@
+//
+//  TransitionAnimator-Prefix.pch
+//  4.2__TransitionAnimator
+//
+//  Created by coco on 16/7/5.
+//  Copyright © 2016年 XHJ. All rights reserved.
+//
+
+#ifndef TransitionAnimator_Prefix_pch
+#define TransitionAnimator_Prefix_pch
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#endif /* TransitionAnimator_Prefix_pch */

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3WC-zy-wIT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__4__人脸识别CIDetector" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSE-d7-XZX">
+                                <rect key="frame" x="50" y="285" width="500" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BW1-ms-DHO"/>
+                                </constraints>
+                                <state key="normal" title="识别">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recognize" destination="BYZ-38-t0r" eventType="touchUpInside" id="YPv-dC-mUr"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EuN-Ve-GdO">
+                                <rect key="frame" x="0.0" y="64" width="600" height="221"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="第五届索尔维会议.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cuE-ja-kbg">
+                                        <rect key="frame" x="209" y="20" width="181" height="181"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cuE-ja-kbg" secondAttribute="height" multiplier="1:1" id="F9R-5p-t2v"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="cuE-ja-kbg" firstAttribute="top" secondItem="EuN-Ve-GdO" secondAttribute="top" constant="20" id="1eT-e1-VRz"/>
+                                    <constraint firstItem="cuE-ja-kbg" firstAttribute="centerY" secondItem="EuN-Ve-GdO" secondAttribute="centerY" id="grK-cO-NhX"/>
+                                    <constraint firstItem="cuE-ja-kbg" firstAttribute="centerX" secondItem="EuN-Ve-GdO" secondAttribute="centerX" id="grN-zg-aB7"/>
+                                    <constraint firstAttribute="bottom" secondItem="cuE-ja-kbg" secondAttribute="bottom" constant="20" id="qMt-T6-IZd"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cct-Vg-CzT">
+                                <rect key="frame" x="0.0" y="333" width="600" height="257"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4tJ-WA-8c4">
+                                    <size key="itemSize" width="220" height="258"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HJImageCell" id="RO4-5d-Z44" customClass="HJImageCell" customModule="__4__人脸识别CIDetector" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-0.5" width="220" height="258"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="220" height="258"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Stu-iz-JKr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="258" height="258"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Stu-iz-JKr" secondAttribute="height" multiplier="1:1" id="bxe-Kb-ZzC"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Stu-iz-JKr" firstAttribute="top" secondItem="RO4-5d-Z44" secondAttribute="top" id="dbN-gV-Um2"/>
+                                            <constraint firstItem="Stu-iz-JKr" firstAttribute="leading" secondItem="RO4-5d-Z44" secondAttribute="leading" id="oVz-9X-gs0"/>
+                                            <constraint firstAttribute="bottom" secondItem="Stu-iz-JKr" secondAttribute="bottom" id="uB3-Wl-Fkg"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageV" destination="Stu-iz-JKr" id="asz-xb-fxS"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dOG-u1-08x"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="G2X-ch-AUu"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyD-Pw-hzS">
+                                <rect key="frame" x="50" y="323" width="500" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DyD-Pw-hzS" firstAttribute="top" secondItem="BSE-d7-XZX" secondAttribute="bottom" constant="8" id="4SG-dz-1rC"/>
+                            <constraint firstItem="BSE-d7-XZX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="5Ej-g4-ALJ"/>
+                            <constraint firstItem="BSE-d7-XZX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7fF-aR-a8H"/>
+                            <constraint firstItem="EuN-Ve-GdO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="97S-ek-Rum"/>
+                            <constraint firstAttribute="trailing" secondItem="EuN-Ve-GdO" secondAttribute="trailing" id="IQz-SY-fcP"/>
+                            <constraint firstItem="EuN-Ve-GdO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Mdc-5t-Pb7"/>
+                            <constraint firstItem="BSE-d7-XZX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Meo-pM-Hb8"/>
+                            <constraint firstItem="DyD-Pw-hzS" firstAttribute="trailing" secondItem="BSE-d7-XZX" secondAttribute="trailing" id="TIq-Jj-Rca"/>
+                            <constraint firstItem="BSE-d7-XZX" firstAttribute="top" secondItem="EuN-Ve-GdO" secondAttribute="bottom" id="bjX-nN-vSS"/>
+                            <constraint firstAttribute="trailing" secondItem="Cct-Vg-CzT" secondAttribute="trailing" id="bja-Qa-PCf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cct-Vg-CzT" secondAttribute="bottom" constant="10" id="eny-K3-lQu"/>
+                            <constraint firstAttribute="trailing" secondItem="BSE-d7-XZX" secondAttribute="trailing" constant="50" id="gIT-mJ-p0z"/>
+                            <constraint firstItem="Cct-Vg-CzT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gIj-z7-KrT"/>
+                            <constraint firstItem="DyD-Pw-hzS" firstAttribute="leading" secondItem="BSE-d7-XZX" secondAttribute="leading" id="vvi-a2-1rm"/>
+                            <constraint firstItem="Cct-Vg-CzT" firstAttribute="top" secondItem="DyD-Pw-hzS" secondAttribute="bottom" constant="10" id="zdR-G8-yDM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IXe-f4-z2H">
+                        <barButtonItem key="leftBarButtonItem" title="打开" id="Elj-4U-Ewx">
+                            <connections>
+                                <action selector="open:" destination="BYZ-38-t0r" id="u5i-YJ-See"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="Cct-Vg-CzT" id="760-ia-rJJ"/>
+                        <outlet property="inputImageV" destination="cuE-ja-kbg" id="tea-Ei-voZ"/>
+                        <outlet property="numberL" destination="DyD-Pw-hzS" id="BTs-2A-0nl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="352"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UYD-AU-BSH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3WC-zy-wIT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gab-gE-Zqe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JCc-kt-aMn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ilg-Lg-BGr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="1012"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="第五届索尔维会议.jpg" width="1280" height="728"/>
+    </resources>
+</document>

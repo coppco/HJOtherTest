@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     //分段
     @IBAction func segment(sender: UISegmentedControl) {
         self.slider.value = 0.5
+//        self.image = self.imageV.image
         if sender.selectedSegmentIndex == 0 {
             self.flag = .tonal
         } else {
@@ -71,12 +72,13 @@ class ViewController: UIViewController {
         public let kCICategoryFilterGenerator: String
         */
         //获取所有滤镜
-        let array = CIFilter.filterNamesInCategories([kCICategoryBlur, kCICategoryBuiltIn])
+        let array = CIFilter.filterNamesInCategories([kCICategoryBuiltIn])
         for name in array {
             let filter = CIFilter(name: name)
+//            print(filter?.attributes)
             print(filter?.description)
         }
-        
+        print(array.count)
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,7 +96,7 @@ class ViewController: UIViewController {
         filter?.setValue(cImage, forKey: "inputImage")  //设置输入图片
         
 //        let text = "旧色调Intensity:\(value)"
-        let text = String(format: "旧色调Intensity:%.2f", value * 10)
+        let text = String(format: "旧色调Intensity:%.2f", value)
         self.titleL.text = text
         
         filter?.setValue(value, forKey: "inputIntensity") //设置旧色调滤镜色调强度
@@ -104,6 +106,7 @@ class ViewController: UIViewController {
         
         let image = UIImage(CGImage: imageRef)
         self.imageV.image = image
+
     }
 
     /*模糊*/
