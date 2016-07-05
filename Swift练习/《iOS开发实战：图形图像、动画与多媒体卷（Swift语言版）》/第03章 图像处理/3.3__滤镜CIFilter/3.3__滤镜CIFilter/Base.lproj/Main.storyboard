@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__3__滤镜CIFilter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="back.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fvK-Ee-FXc">
+                                <rect key="frame" x="20" y="40" width="560" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fvK-Ee-FXc" secondAttribute="height" multiplier="15:15" id="ptn-aO-hSa"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MWD-fb-lQt">
+                                <rect key="frame" x="234" y="620" width="133" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pdM-TN-oOx"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="旧色调"/>
+                                    <segment title="高斯模糊"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segment:" destination="BYZ-38-t0r" eventType="valueChanged" id="G4R-1g-bnA"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="BFAN.png" maximumValueImage="BSMp3.png" translatesAutoresizingMaskIntoConstraints="NO" id="KZy-s4-BBm">
+                                <rect key="frame" x="48" y="693" width="504" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vGe-ft-Wcb"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="B6n-4R-bGC"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeG-1j-eJf">
+                                <rect key="frame" x="30" y="743" width="540" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MWD-fb-lQt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0IP-BG-PNu"/>
+                            <constraint firstItem="KZy-s4-BBm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="2dH-BB-erF"/>
+                            <constraint firstItem="BeG-1j-eJf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="5cR-Wo-oVG"/>
+                            <constraint firstItem="fvK-Ee-FXc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="IJP-mu-tRK"/>
+                            <constraint firstAttribute="trailing" secondItem="fvK-Ee-FXc" secondAttribute="trailing" constant="20" id="NHe-gc-mNg"/>
+                            <constraint firstItem="MWD-fb-lQt" firstAttribute="top" secondItem="fvK-Ee-FXc" secondAttribute="bottom" constant="20" id="PUk-35-XBd"/>
+                            <constraint firstItem="KZy-s4-BBm" firstAttribute="top" secondItem="MWD-fb-lQt" secondAttribute="bottom" constant="43" id="Qhj-Dk-DNE"/>
+                            <constraint firstAttribute="trailing" secondItem="KZy-s4-BBm" secondAttribute="trailing" constant="50" id="Xig-Gj-zfm"/>
+                            <constraint firstAttribute="trailing" secondItem="BeG-1j-eJf" secondAttribute="trailing" constant="30" id="kiH-sL-IkR"/>
+                            <constraint firstItem="fvK-Ee-FXc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="p5p-RY-f8l"/>
+                            <constraint firstItem="BeG-1j-eJf" firstAttribute="top" secondItem="KZy-s4-BBm" secondAttribute="bottom" constant="20" id="x7G-vX-lkL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="haha" destination="ptn-aO-hSa" id="JdI-68-w9L"/>
+                        <outlet property="imageV" destination="fvK-Ee-FXc" id="J9u-j7-W2H"/>
+                        <outlet property="slider" destination="KZy-s4-BBm" id="bbn-gz-SaU"/>
+                        <outlet property="titleL" destination="BeG-1j-eJf" id="H9P-UW-vEy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="353"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BFAN.png" width="25" height="25"/>
+        <image name="BSMp3.png" width="25" height="25"/>
+        <image name="back.jpg" width="420" height="263"/>
+    </resources>
+</document>

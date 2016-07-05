@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__1__图像处理" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWi-nw-4cs">
+                                <rect key="frame" x="30" y="385" width="540" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RLh-oJ-05Z"/>
+                                </constraints>
+                                <state key="normal" title="资源加载图片">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="finder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d5q-04-Dbu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOH-bW-DK3">
+                                <rect key="frame" x="30" y="435" width="540" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="沙盒加载图片">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sandbox:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dfg-K0-S95"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XL-hz-ktt">
+                                <rect key="frame" x="30" y="485" width="540" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="网络加载图片">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="network:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jMK-zb-DKj"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Hx-aZ-dvX">
+                                <rect key="frame" x="50" y="-135" width="500" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4Hx-aZ-dvX" secondAttribute="height" multiplier="8:8" id="ffX-PO-8f5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3XL-hz-ktt" firstAttribute="leading" secondItem="SWi-nw-4cs" secondAttribute="leading" id="2kV-UB-jsY"/>
+                            <constraint firstItem="cOH-bW-DK3" firstAttribute="width" secondItem="SWi-nw-4cs" secondAttribute="width" id="6cd-WM-O0E"/>
+                            <constraint firstItem="3XL-hz-ktt" firstAttribute="width" secondItem="SWi-nw-4cs" secondAttribute="width" id="DY9-hJ-MRl"/>
+                            <constraint firstItem="3XL-hz-ktt" firstAttribute="top" secondItem="cOH-bW-DK3" secondAttribute="bottom" constant="20" id="J91-pb-y0A"/>
+                            <constraint firstItem="4Hx-aZ-dvX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="LK3-ch-7fh"/>
+                            <constraint firstItem="SWi-nw-4cs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="Qdd-e1-5A8"/>
+                            <constraint firstAttribute="trailing" secondItem="4Hx-aZ-dvX" secondAttribute="trailing" constant="50" id="VHd-XP-Rje"/>
+                            <constraint firstItem="cOH-bW-DK3" firstAttribute="top" secondItem="SWi-nw-4cs" secondAttribute="bottom" constant="20" id="kVn-Eb-MJe"/>
+                            <constraint firstItem="cOH-bW-DK3" firstAttribute="height" secondItem="SWi-nw-4cs" secondAttribute="height" id="nVa-bJ-uVp"/>
+                            <constraint firstItem="SWi-nw-4cs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="nnO-6b-9ij"/>
+                            <constraint firstItem="SWi-nw-4cs" firstAttribute="top" secondItem="4Hx-aZ-dvX" secondAttribute="bottom" constant="20" id="omo-0v-grS"/>
+                            <constraint firstItem="SWi-nw-4cs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rVQ-qs-Cir"/>
+                            <constraint firstItem="3XL-hz-ktt" firstAttribute="height" secondItem="SWi-nw-4cs" secondAttribute="height" id="tyJ-Gj-DD0"/>
+                            <constraint firstItem="cOH-bW-DK3" firstAttribute="leading" secondItem="SWi-nw-4cs" secondAttribute="leading" id="uYP-Wr-GXj"/>
+                            <constraint firstAttribute="trailing" secondItem="SWi-nw-4cs" secondAttribute="trailing" constant="30" id="wWI-9A-seR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="4Hx-aZ-dvX" id="aq2-go-n6y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
