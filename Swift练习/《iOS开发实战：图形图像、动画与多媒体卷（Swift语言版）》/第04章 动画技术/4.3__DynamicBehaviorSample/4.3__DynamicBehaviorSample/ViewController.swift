@@ -26,6 +26,22 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
         
+        //测试运动效果
+        //x轴
+        let motionEffectX = UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.TiltAlongHorizontalAxis)
+        motionEffectX.maximumRelativeValue = 50
+        motionEffectX.minimumRelativeValue = -50
+        self.view.addMotionEffect(motionEffectX)
+        
+        let motionEffectY = UIInterpolatingMotionEffect(keyPath: "center.y", type: UIInterpolatingMotionEffectType.TiltAlongHorizontalAxis)
+        motionEffectY.maximumRelativeValue = 50
+        motionEffectY.minimumRelativeValue = -50
+        self.view.addMotionEffect(motionEffectY)
+        
+        for (_, _) in "123456".characters.enumerate() {
+            print("1")
+        }
+        let _ = "dfdf"
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,8 +66,9 @@ class ViewController: UITableViewController {
         let destinationViewController:BehaviorController = segue.destinationViewController as! BehaviorController
         destinationViewController.behaviorType = self.behaviorType
         destinationViewController.title = self.behaviorType.rawValue
+
     }
-    
+
     
 }
 

@@ -16,6 +16,7 @@
 		CC763C4A1D2BAFD300F80EF8 /* __3__DynamicBehaviorSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763C491D2BAFD300F80EF8 /* __3__DynamicBehaviorSampleUITests.swift */; };
 		CC763C581D2BBCBE00F80EF8 /* BehaviorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC763C571D2BBCBE00F80EF8 /* BehaviorController.swift */; };
 		CC763C5A1D2BC46300F80EF8 /* boll.png in Resources */ = {isa = PBXBuildFile; fileRef = CC763C591D2BC46300F80EF8 /* boll.png */; };
+		CC7CD29A1D2C9F46007F9925 /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = CC7CD2991D2C9F46007F9925 /* box.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CC763C4B1D2BAFD300F80EF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC763C571D2BBCBE00F80EF8 /* BehaviorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorController.swift; sourceTree = "<group>"; };
 		CC763C591D2BC46300F80EF8 /* boll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boll.png; sourceTree = "<group>"; };
+		CC7CD2991D2C9F46007F9925 /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		CC763C281D2BAFD300F80EF8 /* 4.3__DynamicBehaviorSample */ = {
 			isa = PBXGroup;
 			children = (
+				CC7CD2991D2C9F46007F9925 /* box.png */,
 				CC763C591D2BC46300F80EF8 /* boll.png */,
 				CC763C291D2BAFD300F80EF8 /* AppDelegate.swift */,
 				CC763C2B1D2BAFD300F80EF8 /* ViewController.swift */,
@@ -237,6 +240,7 @@
 			files = (
 				CC763C5A1D2BC46300F80EF8 /* boll.png in Resources */,
 				CC763C341D2BAFD300F80EF8 /* LaunchScreen.storyboard in Resources */,
+				CC7CD29A1D2C9F46007F9925 /* box.png in Resources */,
 				CC763C311D2BAFD300F80EF8 /* Assets.xcassets in Resources */,
 				CC763C2F1D2BAFD300F80EF8 /* Main.storyboard in Resources */,
 			);
@@ -408,6 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 4.3__DynamicBehaviorSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.coppco.--3--DynamicBehaviorSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -419,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 4.3__DynamicBehaviorSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.coppco.--3--DynamicBehaviorSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -492,6 +498,7 @@
 				CC763C501D2BAFD300F80EF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC763C511D2BAFD300F80EF8 /* Build configuration list for PBXNativeTarget "4.3__DynamicBehaviorSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +507,7 @@
 				CC763C531D2BAFD300F80EF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC763C541D2BAFD300F80EF8 /* Build configuration list for PBXNativeTarget "4.3__DynamicBehaviorSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +516,7 @@
 				CC763C561D2BAFD300F80EF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
