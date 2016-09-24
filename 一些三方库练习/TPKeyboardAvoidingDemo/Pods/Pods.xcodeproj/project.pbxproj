@@ -248,6 +248,7 @@
 		C369B3633EFE35F4AB9076ED8436ABA4 /* NSCache+BlocksKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSCache+BlocksKit.h"; path = "BlocksKit/DynamicDelegate/Foundation/NSCache+BlocksKit.h"; sourceTree = "<group>"; };
 		C77D021196FCBE9291F3B0EEAB0FB836 /* NSMutableDictionary+BlocksKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+BlocksKit.m"; path = "BlocksKit/Core/NSMutableDictionary+BlocksKit.m"; sourceTree = "<group>"; };
 		CC996C2EF4357311E4A317AE1FFC452A /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingCollectionView.h; path = TPKeyboardAvoiding/TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		CCE4CAB71D67110700FBE6AE /* UIScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIScrollView.h; sourceTree = "<group>"; };
 		CFF51517F22A117D30007BC37FDA296F /* libTPKeyboardAvoiding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTPKeyboardAvoiding.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EA68D2FCD7FC46D27DD3D1746F3878 /* NSArray+BlocksKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+BlocksKit.m"; path = "BlocksKit/Core/NSArray+BlocksKit.m"; sourceTree = "<group>"; };
 		D2BD5FAF89629028DC66DA2D303EB190 /* UIBarButtonItem+BlocksKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+BlocksKit.h"; path = "BlocksKit/UIKit/UIBarButtonItem+BlocksKit.h"; sourceTree = "<group>"; };
@@ -506,6 +507,7 @@
 				F8A781FDCC969D5C43D4059A817C5C7D /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
 				2F0831E31570ACEA3CC15813EF21DA06 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 				E2B1D607DAEE792E8BE00B09314027A4 /* Support Files */,
+				CCE4CAB71D67110700FBE6AE /* UIScrollView.h */,
 			);
 			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";

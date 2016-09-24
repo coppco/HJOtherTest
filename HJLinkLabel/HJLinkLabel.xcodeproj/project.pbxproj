@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC86A6ED1D9638E000A89CB2 /* HJLinkLabel1111.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86A6EC1D9638E000A89CB2 /* HJLinkLabel1111.swift */; };
+		CC86A7301D96FFC100A89CB2 /* HJLinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86A72E1D96FFC100A89CB2 /* HJLinkLabel.swift */; };
+		CC86A7311D96FFC100A89CB2 /* HJLinkLabel33.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86A72F1D96FFC100A89CB2 /* HJLinkLabel33.swift */; };
+		CCEBD05B1D94F2880043BFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBD05A1D94F2880043BFBD /* AppDelegate.swift */; };
+		CCEBD05D1D94F2880043BFBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBD05C1D94F2880043BFBD /* ViewController.swift */; };
+		CCEBD0601D94F2880043BFBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCEBD05E1D94F2880043BFBD /* Main.storyboard */; };
+		CCEBD0621D94F2880043BFBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCEBD0611D94F2880043BFBD /* Assets.xcassets */; };
+		CCEBD0651D94F2880043BFBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCEBD0631D94F2880043BFBD /* LaunchScreen.storyboard */; };
+		CCEBD0701D94F2880043BFBD /* HJLinkLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBD06F1D94F2880043BFBD /* HJLinkLabelTests.swift */; };
+		CCEBD07B1D94F2880043BFBD /* HJLinkLabelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBD07A1D94F2880043BFBD /* HJLinkLabelUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCEBD06C1D94F2880043BFBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCEBD04F1D94F2880043BFBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCEBD0561D94F2880043BFBD;
+			remoteInfo = HJLinkLabel;
+		};
+		CCEBD0771D94F2880043BFBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCEBD04F1D94F2880043BFBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCEBD0561D94F2880043BFBD;
+			remoteInfo = HJLinkLabel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC86A6EC1D9638E000A89CB2 /* HJLinkLabel1111.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJLinkLabel1111.swift; sourceTree = "<group>"; };
+		CC86A72E1D96FFC100A89CB2 /* HJLinkLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJLinkLabel.swift; sourceTree = "<group>"; };
+		CC86A72F1D96FFC100A89CB2 /* HJLinkLabel33.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJLinkLabel33.swift; sourceTree = "<group>"; };
+		CCEBD0571D94F2880043BFBD /* HJLinkLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HJLinkLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCEBD05A1D94F2880043BFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CCEBD05C1D94F2880043BFBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CCEBD05F1D94F2880043BFBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCEBD0611D94F2880043BFBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCEBD0641D94F2880043BFBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CCEBD0661D94F2880043BFBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCEBD06B1D94F2880043BFBD /* HJLinkLabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HJLinkLabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCEBD06F1D94F2880043BFBD /* HJLinkLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJLinkLabelTests.swift; sourceTree = "<group>"; };
+		CCEBD0711D94F2880043BFBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCEBD0761D94F2880043BFBD /* HJLinkLabelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HJLinkLabelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCEBD07A1D94F2880043BFBD /* HJLinkLabelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJLinkLabelUITests.swift; sourceTree = "<group>"; };
+		CCEBD07C1D94F2880043BFBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCEBD0541D94F2880043BFBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCEBD0681D94F2880043BFBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCEBD0731D94F2880043BFBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCEBD04E1D94F2880043BFBD = {
+			isa = PBXGroup;
+			children = (
+				CCEBD0591D94F2880043BFBD /* HJLinkLabel */,
+				CCEBD06E1D94F2880043BFBD /* HJLinkLabelTests */,
+				CCEBD0791D94F2880043BFBD /* HJLinkLabelUITests */,
+				CCEBD0581D94F2880043BFBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCEBD0581D94F2880043BFBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCEBD0571D94F2880043BFBD /* HJLinkLabel.app */,
+				CCEBD06B1D94F2880043BFBD /* HJLinkLabelTests.xctest */,
+				CCEBD0761D94F2880043BFBD /* HJLinkLabelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCEBD0591D94F2880043BFBD /* HJLinkLabel */ = {
+			isa = PBXGroup;
+			children = (
+				CCEBD05A1D94F2880043BFBD /* AppDelegate.swift */,
+				CCEBD05C1D94F2880043BFBD /* ViewController.swift */,
+				CC86A6EC1D9638E000A89CB2 /* HJLinkLabel1111.swift */,
+				CC86A72E1D96FFC100A89CB2 /* HJLinkLabel.swift */,
+				CC86A72F1D96FFC100A89CB2 /* HJLinkLabel33.swift */,
+				CCEBD05E1D94F2880043BFBD /* Main.storyboard */,
+				CCEBD0611D94F2880043BFBD /* Assets.xcassets */,
+				CCEBD0631D94F2880043BFBD /* LaunchScreen.storyboard */,
+				CCEBD0661D94F2880043BFBD /* Info.plist */,
+			);
+			path = HJLinkLabel;
+			sourceTree = "<group>";
+		};
+		CCEBD06E1D94F2880043BFBD /* HJLinkLabelTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCEBD06F1D94F2880043BFBD /* HJLinkLabelTests.swift */,
+				CCEBD0711D94F2880043BFBD /* Info.plist */,
+			);
+			path = HJLinkLabelTests;
+			sourceTree = "<group>";
+		};
+		CCEBD0791D94F2880043BFBD /* HJLinkLabelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CCEBD07A1D94F2880043BFBD /* HJLinkLabelUITests.swift */,
+				CCEBD07C1D94F2880043BFBD /* Info.plist */,
+			);
+			path = HJLinkLabelUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCEBD0561D94F2880043BFBD /* HJLinkLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCEBD07F1D94F2880043BFBD /* Build configuration list for PBXNativeTarget "HJLinkLabel" */;
+			buildPhases = (
+				CCEBD0531D94F2880043BFBD /* Sources */,
+				CCEBD0541D94F2880043BFBD /* Frameworks */,
+				CCEBD0551D94F2880043BFBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HJLinkLabel;
+			productName = HJLinkLabel;
+			productReference = CCEBD0571D94F2880043BFBD /* HJLinkLabel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCEBD06A1D94F2880043BFBD /* HJLinkLabelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCEBD0821D94F2880043BFBD /* Build configuration list for PBXNativeTarget "HJLinkLabelTests" */;
+			buildPhases = (
+				CCEBD0671D94F2880043BFBD /* Sources */,
+				CCEBD0681D94F2880043BFBD /* Frameworks */,
+				CCEBD0691D94F2880043BFBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCEBD06D1D94F2880043BFBD /* PBXTargetDependency */,
+			);
+			name = HJLinkLabelTests;
+			productName = HJLinkLabelTests;
+			productReference = CCEBD06B1D94F2880043BFBD /* HJLinkLabelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CCEBD0751D94F2880043BFBD /* HJLinkLabelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCEBD0851D94F2880043BFBD /* Build configuration list for PBXNativeTarget "HJLinkLabelUITests" */;
+			buildPhases = (
+				CCEBD0721D94F2880043BFBD /* Sources */,
+				CCEBD0731D94F2880043BFBD /* Frameworks */,
+				CCEBD0741D94F2880043BFBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCEBD0781D94F2880043BFBD /* PBXTargetDependency */,
+			);
+			name = HJLinkLabelUITests;
+			productName = HJLinkLabelUITests;
+			productReference = CCEBD0761D94F2880043BFBD /* HJLinkLabelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCEBD04F1D94F2880043BFBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = XHJ;
+				TargetAttributes = {
+					CCEBD0561D94F2880043BFBD = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					CCEBD06A1D94F2880043BFBD = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = CCEBD0561D94F2880043BFBD;
+					};
+					CCEBD0751D94F2880043BFBD = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = CCEBD0561D94F2880043BFBD;
+					};
+				};
+			};
+			buildConfigurationList = CCEBD0521D94F2880043BFBD /* Build configuration list for PBXProject "HJLinkLabel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCEBD04E1D94F2880043BFBD;
+			productRefGroup = CCEBD0581D94F2880043BFBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCEBD0561D94F2880043BFBD /* HJLinkLabel */,
+				CCEBD06A1D94F2880043BFBD /* HJLinkLabelTests */,
+				CCEBD0751D94F2880043BFBD /* HJLinkLabelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCEBD0551D94F2880043BFBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCEBD0651D94F2880043BFBD /* LaunchScreen.storyboard in Resources */,
+				CCEBD0621D94F2880043BFBD /* Assets.xcassets in Resources */,
+				CCEBD0601D94F2880043BFBD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCEBD0691D94F2880043BFBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCEBD0741D94F2880043BFBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCEBD0531D94F2880043BFBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC86A7301D96FFC100A89CB2 /* HJLinkLabel.swift in Sources */,
+				CC86A7311D96FFC100A89CB2 /* HJLinkLabel33.swift in Sources */,
+				CC86A6ED1D9638E000A89CB2 /* HJLinkLabel1111.swift in Sources */,
+				CCEBD05D1D94F2880043BFBD /* ViewController.swift in Sources */,
+				CCEBD05B1D94F2880043BFBD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCEBD0671D94F2880043BFBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCEBD0701D94F2880043BFBD /* HJLinkLabelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCEBD0721D94F2880043BFBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCEBD07B1D94F2880043BFBD /* HJLinkLabelUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCEBD06D1D94F2880043BFBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCEBD0561D94F2880043BFBD /* HJLinkLabel */;
+			targetProxy = CCEBD06C1D94F2880043BFBD /* PBXContainerItemProxy */;
+		};
+		CCEBD0781D94F2880043BFBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCEBD0561D94F2880043BFBD /* HJLinkLabel */;
+			targetProxy = CCEBD0771D94F2880043BFBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CCEBD05E1D94F2880043BFBD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCEBD05F1D94F2880043BFBD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CCEBD0631D94F2880043BFBD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCEBD0641D94F2880043BFBD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCEBD07D1D94F2880043BFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCEBD07E1D94F2880043BFBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCEBD0801D94F2880043BFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HJLinkLabel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.coppco.HJLinkLabel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CCEBD0811D94F2880043BFBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HJLinkLabel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.coppco.HJLinkLabel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CCEBD0831D94F2880043BFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HJLinkLabelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.coppco.HJLinkLabelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HJLinkLabel.app/HJLinkLabel";
+			};
+			name = Debug;
+		};
+		CCEBD0841D94F2880043BFBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HJLinkLabelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.coppco.HJLinkLabelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HJLinkLabel.app/HJLinkLabel";
+			};
+			name = Release;
+		};
+		CCEBD0861D94F2880043BFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HJLinkLabelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.coppco.HJLinkLabelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HJLinkLabel;
+			};
+			name = Debug;
+		};
+		CCEBD0871D94F2880043BFBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HJLinkLabelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.coppco.HJLinkLabelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HJLinkLabel;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCEBD0521D94F2880043BFBD /* Build configuration list for PBXProject "HJLinkLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCEBD07D1D94F2880043BFBD /* Debug */,
+				CCEBD07E1D94F2880043BFBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCEBD07F1D94F2880043BFBD /* Build configuration list for PBXNativeTarget "HJLinkLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCEBD0801D94F2880043BFBD /* Debug */,
+				CCEBD0811D94F2880043BFBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCEBD0821D94F2880043BFBD /* Build configuration list for PBXNativeTarget "HJLinkLabelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCEBD0831D94F2880043BFBD /* Debug */,
+				CCEBD0841D94F2880043BFBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCEBD0851D94F2880043BFBD /* Build configuration list for PBXNativeTarget "HJLinkLabelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCEBD0861D94F2880043BFBD /* Debug */,
+				CCEBD0871D94F2880043BFBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCEBD04F1D94F2880043BFBD /* Project object */;
+}
