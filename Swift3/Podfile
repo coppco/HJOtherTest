@@ -1,0 +1,7 @@
+platform :ios, ‘8.0’
+
+use_frameworks!
+
+target “Swift3” do
+pod 'HandyJSON', '~> 1.1.0'
+end
