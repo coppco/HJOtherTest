@@ -23,7 +23,7 @@
     [self.view addSubview:_scrollView];
     
     UIView *lastView = nil;
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 10; i++) {
         UILabel *label = [[UILabel alloc] init];
         label.numberOfLines = 0;
         label.text = [self getString];

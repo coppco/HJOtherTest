@@ -26,6 +26,7 @@
 - (void)addCell {
     [self addTitle:@"Storyboard中scrollview布局" className:@"one"];
     [self addTitle:@"Storyboard平行布局" className:@"two"];
+     [self addTitle:@"代码设置" className:@"HJCodeViewController"];
     [self addTitle:@"基本使用" className:@"HJBaseController"];
     [self addTitle:@"动画更新约束" className:@"HJUpdateController"];
     [self addTitle:@"动画重新更新约束" className:@"HJRemakeController"];

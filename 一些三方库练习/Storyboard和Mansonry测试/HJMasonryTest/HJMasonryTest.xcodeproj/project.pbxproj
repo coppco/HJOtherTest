@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A97EE31E7A1C45003DDEF2 /* HJCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A97EE21E7A1C45003DDEF2 /* HJCodeViewController.m */; };
 		6BFB7CB16DE7FD1359D901C6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3450C0B611FAB487967CA71 /* libPods.a */; };
 		CC0327481CA8FA970072C076 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0327471CA8FA970072C076 /* main.m */; };
 		CC03274B1CA8FA970072C076 /* HJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC03274A1CA8FA970072C076 /* HJAppDelegate.m */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18A97EE11E7A1C45003DDEF2 /* HJCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCodeViewController.h; sourceTree = "<group>"; };
+		18A97EE21E7A1C45003DDEF2 /* HJCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCodeViewController.m; sourceTree = "<group>"; };
 		7A060CB14B28BDF5606D556F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C3450C0B611FAB487967CA71 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0327431CA8FA970072C076 /* HJMasonryTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HJMasonryTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				CC03277B1CA8FBEB0072C076 /* Base */,
+				18A97EE11E7A1C45003DDEF2 /* HJCodeViewController.h */,
+				18A97EE21E7A1C45003DDEF2 /* HJCodeViewController.m */,
 				CC0327811CA8FE1A0072C076 /* HJBaseController.h */,
 				CC0327821CA8FE1A0072C076 /* HJBaseController.m */,
 				CC0327841CA8FE390072C076 /* HJUpdateController.h */,
@@ -470,6 +475,7 @@
 			files = (
 				CC03278F1CA8FE710072C076 /* HJCompositeController.m in Sources */,
 				CC0327921CA8FE860072C076 /* HJAspectFitController.m in Sources */,
+				18A97EE31E7A1C45003DDEF2 /* HJCodeViewController.m in Sources */,
 				CC03278C1CA8FE5B0072C076 /* HJTotalController.m in Sources */,
 				CC0327AD1CAA16700072C076 /* HJTestModel.m in Sources */,
 				CC0327A51CA906280072C076 /* HJTool.m in Sources */,
