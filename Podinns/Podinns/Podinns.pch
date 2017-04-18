@@ -1,0 +1,28 @@
+//
+//  Podinns.pch
+//  Podinns
+//
+//  Created by apple on 2017/3/4.
+//  Copyright © 2017年 apple. All rights reserved.
+//
+
+#ifndef Podinns_pch
+#define Podinns_pch
+
+#import "AppDefine.h"
+#import "CommonDefine.h"
+#import "HttpDefine.h"
+#import "HJHttpManager.h"
+#import <MJExtension.h>
+#import "UIBarButtonItem+HJExtension.h"
+#import "NSData+HJExtension.h"
+#import "NSDate+HJExtension.h"
+#import "NSString+HJExtension.h"
+#import "UIView+HJExtension.h"
+#import "MBProgressHUD+HJExtension.h"
+#import "UIViewController+MBProgressHUD.h"
+#import <Masonry.h>
+#import <ReactiveCocoa.h>
+#import "FMDBHandle.h"
+
+#endif /* Podinns_pch */
