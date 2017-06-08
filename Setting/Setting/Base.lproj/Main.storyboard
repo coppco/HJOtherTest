@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wc1-bm-hhq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ric-M0-v1S">
+                                <rect key="frame" x="164" y="94" width="46" height="30"/>
+                                <state key="normal" title="打电话"/>
+                                <connections>
+                                    <action selector="phone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eDX-pH-xc7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBa-lm-qg4">
+                                <rect key="frame" x="164" y="154" width="46" height="30"/>
+                                <state key="normal" title="发短信"/>
+                                <connections>
+                                    <action selector="phone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5DP-Tx-Cnk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GG-K4-pl5">
+                                <rect key="frame" x="164" y="214" width="46" height="30"/>
+                                <state key="normal" title="发邮件"/>
+                                <connections>
+                                    <action selector="phone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ca4-v9-ipd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p74-2W-wtS">
+                                <rect key="frame" x="172" y="334" width="31" height="30"/>
+                                <state key="normal" title="设置"/>
+                                <connections>
+                                    <action selector="phone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SsS-jy-QmG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cy2-cq-N0g">
+                                <rect key="frame" x="172" y="274" width="31" height="30"/>
+                                <state key="normal" title="上网"/>
+                                <connections>
+                                    <action selector="phone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sCA-xg-Uyq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqZ-oP-hfM">
+                                <rect key="frame" x="172" y="394" width="31" height="30"/>
+                                <state key="normal" title="更新"/>
+                                <connections>
+                                    <action selector="phone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsS-SP-6Gk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0s-r0-x5h">
+                                <rect key="frame" x="172" y="454" width="31" height="30"/>
+                                <state key="normal" title="评论"/>
+                                <connections>
+                                    <action selector="phone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H4X-UJ-X8w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saL-Jn-uLW">
+                                <rect key="frame" x="157" y="514" width="62" height="30"/>
+                                <state key="normal" title="内部评论"/>
+                                <connections>
+                                    <action selector="phone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eBq-OB-JS6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARC-2a-2Hn">
+                                <rect key="frame" x="173" y="574" width="30" height="30"/>
+                                <state key="normal" title="QQ"/>
+                                <connections>
+                                    <action selector="phone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vq5-gd-Xsy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ARC-2a-2Hn" firstAttribute="top" secondItem="saL-Jn-uLW" secondAttribute="bottom" constant="30" id="2k2-Rn-5Kr"/>
+                            <constraint firstItem="DBa-lm-qg4" firstAttribute="centerX" secondItem="ric-M0-v1S" secondAttribute="centerX" id="A9X-LN-Gzy"/>
+                            <constraint firstItem="ric-M0-v1S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="B0g-Jl-gSM"/>
+                            <constraint firstItem="p74-2W-wtS" firstAttribute="centerX" secondItem="ric-M0-v1S" secondAttribute="centerX" id="Cpy-4a-YDb"/>
+                            <constraint firstItem="Cy2-cq-N0g" firstAttribute="top" secondItem="8GG-K4-pl5" secondAttribute="bottom" constant="30" id="DYL-OQ-xlD"/>
+                            <constraint firstItem="ARC-2a-2Hn" firstAttribute="centerX" secondItem="saL-Jn-uLW" secondAttribute="centerX" id="HK6-GB-wmZ"/>
+                            <constraint firstItem="ric-M0-v1S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jix-da-Hux"/>
+                            <constraint firstItem="N0s-r0-x5h" firstAttribute="centerX" secondItem="p74-2W-wtS" secondAttribute="centerX" id="MoN-hc-rXq"/>
+                            <constraint firstItem="Cy2-cq-N0g" firstAttribute="centerX" secondItem="ric-M0-v1S" secondAttribute="centerX" id="SYq-rw-MNB"/>
+                            <constraint firstItem="p74-2W-wtS" firstAttribute="top" secondItem="Cy2-cq-N0g" secondAttribute="bottom" constant="30" id="Vv8-HE-8Qq"/>
+                            <constraint firstItem="DBa-lm-qg4" firstAttribute="top" secondItem="ric-M0-v1S" secondAttribute="bottom" constant="30" id="X8p-5O-u5X"/>
+                            <constraint firstItem="nqZ-oP-hfM" firstAttribute="centerX" secondItem="p74-2W-wtS" secondAttribute="centerX" id="YPN-Kx-NLe"/>
+                            <constraint firstItem="nqZ-oP-hfM" firstAttribute="top" secondItem="p74-2W-wtS" secondAttribute="bottom" constant="30" id="dWz-Js-lde"/>
+                            <constraint firstItem="saL-Jn-uLW" firstAttribute="top" secondItem="N0s-r0-x5h" secondAttribute="bottom" constant="30" id="gGT-tg-uEz"/>
+                            <constraint firstItem="saL-Jn-uLW" firstAttribute="centerX" secondItem="N0s-r0-x5h" secondAttribute="centerX" id="nem-EK-pDT"/>
+                            <constraint firstItem="N0s-r0-x5h" firstAttribute="top" secondItem="nqZ-oP-hfM" secondAttribute="bottom" constant="30" id="ohi-rz-P6o"/>
+                            <constraint firstItem="8GG-K4-pl5" firstAttribute="top" secondItem="DBa-lm-qg4" secondAttribute="bottom" constant="30" id="x3c-WG-2EU"/>
+                            <constraint firstItem="8GG-K4-pl5" firstAttribute="centerX" secondItem="ric-M0-v1S" secondAttribute="centerX" id="zSl-6a-J5J"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ptf-1r-PA6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gho-98-bV9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wc1-bm-hhq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iy9-0d-3ms">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Gio-U3-gcE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9UR-Qk-rSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="791.15442278860576"/>
+        </scene>
+    </scenes>
+</document>

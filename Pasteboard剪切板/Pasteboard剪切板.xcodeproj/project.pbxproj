@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18E323BA1ED4055B00D9262E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E323B91ED4055B00D9262E /* main.m */; };
+		18E323BD1ED4055B00D9262E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E323BC1ED4055B00D9262E /* AppDelegate.m */; };
+		18E323C01ED4055B00D9262E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E323BF1ED4055B00D9262E /* ViewController.m */; };
+		18E323C31ED4055B00D9262E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E323C11ED4055B00D9262E /* Main.storyboard */; };
+		18E323C51ED4055B00D9262E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E323C41ED4055B00D9262E /* Assets.xcassets */; };
+		18E323C81ED4055B00D9262E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E323C61ED4055B00D9262E /* LaunchScreen.storyboard */; };
+		18E323D31ED4055B00D9262E /* Pasteboard___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E323D21ED4055B00D9262E /* Pasteboard___Tests.m */; };
+		18E323DE1ED4055B00D9262E /* Pasteboard___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E323DD1ED4055B00D9262E /* Pasteboard___UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18E323CF1ED4055B00D9262E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18E323AD1ED4055B00D9262E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18E323B41ED4055B00D9262E;
+			remoteInfo = "Pasteboard剪切板";
+		};
+		18E323DA1ED4055B00D9262E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18E323AD1ED4055B00D9262E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18E323B41ED4055B00D9262E;
+			remoteInfo = "Pasteboard剪切板";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18E323B51ED4055B00D9262E /* Pasteboard剪切板.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pasteboard剪切板.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E323B91ED4055B00D9262E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18E323BB1ED4055B00D9262E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18E323BC1ED4055B00D9262E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18E323BE1ED4055B00D9262E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		18E323BF1ED4055B00D9262E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18E323C21ED4055B00D9262E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18E323C41ED4055B00D9262E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18E323C71ED4055B00D9262E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18E323C91ED4055B00D9262E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E323CE1ED4055B00D9262E /* Pasteboard剪切板Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pasteboard剪切板Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E323D21ED4055B00D9262E /* Pasteboard___Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Pasteboard___Tests.m"; sourceTree = "<group>"; };
+		18E323D41ED4055B00D9262E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E323D91ED4055B00D9262E /* Pasteboard剪切板UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pasteboard剪切板UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E323DD1ED4055B00D9262E /* Pasteboard___UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Pasteboard___UITests.m"; sourceTree = "<group>"; };
+		18E323DF1ED4055B00D9262E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E323EB1ED41C8700D9262E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		18E323EC1ED41C8700D9262E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18E323B21ED4055B00D9262E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18E323CB1ED4055B00D9262E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18E323D61ED4055B00D9262E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18E323AC1ED4055B00D9262E = {
+			isa = PBXGroup;
+			children = (
+				18E323B71ED4055B00D9262E /* Pasteboard剪切板 */,
+				18E323D11ED4055B00D9262E /* Pasteboard剪切板Tests */,
+				18E323DC1ED4055B00D9262E /* Pasteboard剪切板UITests */,
+				18E323B61ED4055B00D9262E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18E323B61ED4055B00D9262E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18E323B51ED4055B00D9262E /* Pasteboard剪切板.app */,
+				18E323CE1ED4055B00D9262E /* Pasteboard剪切板Tests.xctest */,
+				18E323D91ED4055B00D9262E /* Pasteboard剪切板UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18E323B71ED4055B00D9262E /* Pasteboard剪切板 */ = {
+			isa = PBXGroup;
+			children = (
+				18E323BB1ED4055B00D9262E /* AppDelegate.h */,
+				18E323BC1ED4055B00D9262E /* AppDelegate.m */,
+				18E323BE1ED4055B00D9262E /* ViewController.h */,
+				18E323BF1ED4055B00D9262E /* ViewController.m */,
+				18E323C11ED4055B00D9262E /* Main.storyboard */,
+				18E323C41ED4055B00D9262E /* Assets.xcassets */,
+				18E323C61ED4055B00D9262E /* LaunchScreen.storyboard */,
+				18E323C91ED4055B00D9262E /* Info.plist */,
+				18E323B81ED4055B00D9262E /* Supporting Files */,
+			);
+			path = "Pasteboard剪切板";
+			sourceTree = "<group>";
+		};
+		18E323B81ED4055B00D9262E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18E323B91ED4055B00D9262E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18E323D11ED4055B00D9262E /* Pasteboard剪切板Tests */ = {
+			isa = PBXGroup;
+			children = (
+				18E323D21ED4055B00D9262E /* Pasteboard___Tests.m */,
+				18E323D41ED4055B00D9262E /* Info.plist */,
+			);
+			path = "Pasteboard剪切板Tests";
+			sourceTree = "<group>";
+		};
+		18E323DC1ED4055B00D9262E /* Pasteboard剪切板UITests */ = {
+			isa = PBXGroup;
+			children = (
+				18E323DD1ED4055B00D9262E /* Pasteboard___UITests.m */,
+				18E323DF1ED4055B00D9262E /* Info.plist */,
+			);
+			path = "Pasteboard剪切板UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18E323B41ED4055B00D9262E /* Pasteboard剪切板 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18E323E21ED4055B00D9262E /* Build configuration list for PBXNativeTarget "Pasteboard剪切板" */;
+			buildPhases = (
+				18E323B11ED4055B00D9262E /* Sources */,
+				18E323B21ED4055B00D9262E /* Frameworks */,
+				18E323B31ED4055B00D9262E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pasteboard剪切板";
+			productName = "Pasteboard剪切板";
+			productReference = 18E323B51ED4055B00D9262E /* Pasteboard剪切板.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18E323CD1ED4055B00D9262E /* Pasteboard剪切板Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18E323E51ED4055B00D9262E /* Build configuration list for PBXNativeTarget "Pasteboard剪切板Tests" */;
+			buildPhases = (
+				18E323CA1ED4055B00D9262E /* Sources */,
+				18E323CB1ED4055B00D9262E /* Frameworks */,
+				18E323CC1ED4055B00D9262E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18E323D01ED4055B00D9262E /* PBXTargetDependency */,
+			);
+			name = "Pasteboard剪切板Tests";
+			productName = "Pasteboard剪切板Tests";
+			productReference = 18E323CE1ED4055B00D9262E /* Pasteboard剪切板Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18E323D81ED4055B00D9262E /* Pasteboard剪切板UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18E323E81ED4055B00D9262E /* Build configuration list for PBXNativeTarget "Pasteboard剪切板UITests" */;
+			buildPhases = (
+				18E323D51ED4055B00D9262E /* Sources */,
+				18E323D61ED4055B00D9262E /* Frameworks */,
+				18E323D71ED4055B00D9262E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18E323DB1ED4055B00D9262E /* PBXTargetDependency */,
+			);
+			name = "Pasteboard剪切板UITests";
+			productName = "Pasteboard剪切板UITests";
+			productReference = 18E323D91ED4055B00D9262E /* Pasteboard剪切板UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18E323AD1ED4055B00D9262E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = apple;
+				TargetAttributes = {
+					18E323B41ED4055B00D9262E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 22WJPSK3UY;
+						ProvisioningStyle = Automatic;
+					};
+					18E323CD1ED4055B00D9262E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 22WJPSK3UY;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 18E323B41ED4055B00D9262E;
+					};
+					18E323D81ED4055B00D9262E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 22WJPSK3UY;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 18E323B41ED4055B00D9262E;
+					};
+				};
+			};
+			buildConfigurationList = 18E323B01ED4055B00D9262E /* Build configuration list for PBXProject "Pasteboard剪切板" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18E323AC1ED4055B00D9262E;
+			productRefGroup = 18E323B61ED4055B00D9262E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18E323B41ED4055B00D9262E /* Pasteboard剪切板 */,
+				18E323CD1ED4055B00D9262E /* Pasteboard剪切板Tests */,
+				18E323D81ED4055B00D9262E /* Pasteboard剪切板UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18E323B31ED4055B00D9262E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E323C81ED4055B00D9262E /* LaunchScreen.storyboard in Resources */,
+				18E323C51ED4055B00D9262E /* Assets.xcassets in Resources */,
+				18E323C31ED4055B00D9262E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18E323CC1ED4055B00D9262E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18E323D71ED4055B00D9262E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18E323B11ED4055B00D9262E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E323C01ED4055B00D9262E /* ViewController.m in Sources */,
+				18E323BD1ED4055B00D9262E /* AppDelegate.m in Sources */,
+				18E323BA1ED4055B00D9262E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18E323CA1ED4055B00D9262E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E323D31ED4055B00D9262E /* Pasteboard___Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18E323D51ED4055B00D9262E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E323DE1ED4055B00D9262E /* Pasteboard___UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18E323D01ED4055B00D9262E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18E323B41ED4055B00D9262E /* Pasteboard剪切板 */;
+			targetProxy = 18E323CF1ED4055B00D9262E /* PBXContainerItemProxy */;
+		};
+		18E323DB1ED4055B00D9262E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18E323B41ED4055B00D9262E /* Pasteboard剪切板 */;
+			targetProxy = 18E323DA1ED4055B00D9262E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18E323C11ED4055B00D9262E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18E323C21ED4055B00D9262E /* Base */,
+				18E323EB1ED41C8700D9262E /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18E323C61ED4055B00D9262E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18E323C71ED4055B00D9262E /* Base */,
+				18E323EC1ED41C8700D9262E /* zh-Hans */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18E323E01ED4055B00D9262E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		18E323E11ED4055B00D9262E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18E323E31ED4055B00D9262E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 22WJPSK3UY;
+				INFOPLIST_FILE = "Pasteboard剪切板/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xcjrbank.Pasteboard---";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18E323E41ED4055B00D9262E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 22WJPSK3UY;
+				INFOPLIST_FILE = "Pasteboard剪切板/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xcjrbank.Pasteboard---";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		18E323E61ED4055B00D9262E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 22WJPSK3UY;
+				INFOPLIST_FILE = "Pasteboard剪切板Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xcjrbank.Pasteboard---Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pasteboard剪切板.app/Pasteboard剪切板";
+			};
+			name = Debug;
+		};
+		18E323E71ED4055B00D9262E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 22WJPSK3UY;
+				INFOPLIST_FILE = "Pasteboard剪切板Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xcjrbank.Pasteboard---Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pasteboard剪切板.app/Pasteboard剪切板";
+			};
+			name = Release;
+		};
+		18E323E91ED4055B00D9262E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 22WJPSK3UY;
+				INFOPLIST_FILE = "Pasteboard剪切板UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xcjrbank.Pasteboard---UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Pasteboard剪切板";
+			};
+			name = Debug;
+		};
+		18E323EA1ED4055B00D9262E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 22WJPSK3UY;
+				INFOPLIST_FILE = "Pasteboard剪切板UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xcjrbank.Pasteboard---UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Pasteboard剪切板";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18E323B01ED4055B00D9262E /* Build configuration list for PBXProject "Pasteboard剪切板" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E323E01ED4055B00D9262E /* Debug */,
+				18E323E11ED4055B00D9262E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18E323E21ED4055B00D9262E /* Build configuration list for PBXNativeTarget "Pasteboard剪切板" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E323E31ED4055B00D9262E /* Debug */,
+				18E323E41ED4055B00D9262E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18E323E51ED4055B00D9262E /* Build configuration list for PBXNativeTarget "Pasteboard剪切板Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E323E61ED4055B00D9262E /* Debug */,
+				18E323E71ED4055B00D9262E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18E323E81ED4055B00D9262E /* Build configuration list for PBXNativeTarget "Pasteboard剪切板UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E323E91ED4055B00D9262E /* Debug */,
+				18E323EA1ED4055B00D9262E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18E323AD1ED4055B00D9262E /* Project object */;
+}

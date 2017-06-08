@@ -1,0 +1,13 @@
+platform :ios, '7.0'
+
+#use_frameworks!
+
+target ‘iCarouselDemo' do
+
+pod 'iCarousel', '~> 1.8.3'  
+pod 'AFNetworking', '~> 3.1.0'
+pod 'SDWebImage', '~> 4.0.0'
+pod 'MJExtension', '~> 3.0.13'
+pod 'MJRefresh', '~> 3.1.12'
+
+end

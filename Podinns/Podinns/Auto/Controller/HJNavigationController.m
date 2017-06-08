@@ -7,7 +7,7 @@
 //
 
 #import "HJNavigationController.h"
-
+#import <FLEX.h>
 @interface HJNavigationController ()<UIGestureRecognizerDelegate>
 
 @end
@@ -24,6 +24,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.interactivePopGestureRecognizer.delegate = self;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+    [self.navigationBar addGestureRecognizer:tap];
+}
+- (void)tap:(UITapGestureRecognizer *)tapRecognizer
+{
+    if (tapRecognizer.state == UIGestureRecognizerStateRecognized) {
+        // This could also live in a handler for a keyboard shortcut, debug menu item, etc.
+        [[FLEXManager sharedManager] showExplorer];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

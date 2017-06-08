@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FLEX.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4A3AED3B8A2E379ACA1A7B558ED6357B</key>
+		<key>0001E9B8C2E625FC99649783952A6A88</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1771656889C15845B15E47EA3ABBF5EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B4F2B790026F743AADBD2CE7F82D7AF7</key>
+		<key>D17A2FBA240326E95120BBA1FB740C56</key>
 		<dict>
 			<key>primary</key>
 			<true/>
