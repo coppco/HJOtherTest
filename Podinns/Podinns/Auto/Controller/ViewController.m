@@ -13,8 +13,6 @@
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 /*账户数组*/
 @property(nonatomic, strong)NSMutableArray * accountA;
-/*开始按钮*/
-@property(nonatomic, strong)UIButton * startB;
 /*tableView*/
 @property(nonatomic, strong)UITableView * tableView;
 /*登录是否成功*/
@@ -44,163 +42,218 @@
 - (void)setup {
     self.navigationItem.title = @"布丁酒店账号管理工具";
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithTitle:nil titleNormalColor:nil titleHighlightedColor:nil normalImage:@"setting" highlightedImage:@"setting" target:self action:@selector(addAccount:) edg:(UIEdgeInsetsZero)];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithTitle:nil titleNormalColor:nil titleHighlightedColor:nil normalImage:@"setting" highlightedImage:@"setting" target:self action:@selector(addAccount:) edg:(UIEdgeInsetsZero)];
+    
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithTitle:nil titleNormalColor:nil titleHighlightedColor:nil normalImage:@"one" highlightedImage:@"one" target:self action:@selector(oneKey:) edg:(UIEdgeInsetsZero)];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
 }
-
-- (void)startLoginWith:(AccountVo *)account secion:(NSInteger)section {
+- (void)oneKey:(UIButton *)button {
+    if (self.accountA.count == 0) {
+        [self show_Success:@"本地没有账号" delay:1];
+        return;
+    }
+    if (self.isLoading) {
+        return;
+    }
     self.isLoading = true;
-    dispatch_group_t group = dispatch_group_create();
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
-    dispatch_group_async(group, queue, ^{
-        [self loginWith:account group:group section:(NSInteger)section];
-    });
-    dispatch_group_notify(group, queue, ^{
-        if (!self.isSuccess) {
-            return;
-        }
-        //签到
-        if (![NSDate dateFromString:account.last_signDate dateFormatter:SQLDataFormatter].isToday) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [[HJHttpManager sharedInstance] requestJSONWithURL:kSign type:(RequestTypePost) paramObject:nil paramDictionary:nil progress:^(NSProgress *progress) {
-                    
-                } success:^(id responseObject) {
-                    NSDictionary *dic = responseObject;
-                    if ([dic[@"Text"] isEqualToString:@"OK"]) {
-                        [self show_Success:[NSString stringWithFormat:@"%@签到成功", account.userName] delay:1];
-                    } else {
-                        [self show_Success:[NSString stringWithFormat:@"%@%@", account.userName, dic[@"Text"]] delay:1];
-                    }
-                    account.last_signDate = [[NSDate date] stringWithFormatter:SQLDataFormatter];
-                    [FMDBHandle updateAccountWith:account];
-                    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:(UITableViewRowAnimationFade)];
-                } failure:^(NSError *error) {
-                    [self show_Error:[NSString stringWithFormat:@"签到--网络请求失败!!"] delay:1];
-                }];
-            });
-        } else {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self show_Warning:[NSString stringWithFormat:@"%@今天已经签到过了", account.userName] delay:1];
-            });
-        }
-        
-        //每日积分抽奖
-        if (![NSDate dateFromString:account.last_lotteryDate dateFormatter:SQLDataFormatter].isToday) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [[HJHttpManager sharedInstance] requestJSONWithURL:kDayLottery type:(RequestTypePost) paramObject:nil paramDictionary:nil progress:^(NSProgress *progress) {
-                    
-                } success:^(id responseObject) {
-                    account.last_lotteryDate = [[NSDate date] stringWithFormatter:SQLDataFormatter];
-                    [FMDBHandle updateAccountWith:account];
-                    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:(UITableViewRowAnimationFade)];
-                    [self show_Success:[NSString stringWithFormat:@"你获得%@",responseObject[@"msg"]] delay:1];
-                } failure:^(NSError *error) {
-                    [self show_Error:[NSString stringWithFormat:@"%@积分抽奖--网络请求失败!!", account.userName] delay:1];
-                }];
-            });
-        } else {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self show_Warning:[NSString stringWithFormat:@"%@今天积分抽奖已经抽过了", account.userName] delay:1];
-            });
-        }
-        
-        //周抽奖
-        NSInteger day = [NSDate date].day;
-        NSInteger week = 0;
-        if (day >= 1 && day <= 7) {
-            week = 1;
-        } else if (day >= 8 && day <= 14) {
-            week = 2;
-        } else if (day >= 15 && day <= 21) {
-            week = 3;
-        } else if (day >= 22 && day <= 28) {
-            week = 4;
-        } else {
-            week = 4;
-        }
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [[HJHttpManager sharedInstance] requestJSONWithURL:kWeekLottery(week) type:(RequestTypePost) paramObject:nil paramDictionary:nil progress:^(NSProgress *progress) {
-                
-            } success:^(id responseObject) {
-//                {
-//                    Msg = 1;
-//                    Text = 145;
-//                }
-                if ([[responseObject[@"Error"] stringValue] isEqual:@"1"]) {
-                    [self show_Error:[NSString stringWithFormat:@"%@", responseObject[@"Text"]] delay:1];
-                    if ([responseObject[@"Text"] isEqualToString:@"本周您已抽奖"]) {
-                        account.last_weekLotteryDate = [[NSDate date] stringWithFormatter:SQLDataFormatter];
-                        [FMDBHandle updateAccountWith:account];
-                        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:(UITableViewRowAnimationFade)];
-                    }
-                } else if ([[responseObject[@"Msg"] stringValue] isEqualToString:@"1"]) {
-                    account.last_weekLotteryDate = [[NSDate date] stringWithFormatter:SQLDataFormatter];
-                    [FMDBHandle updateAccountWith:account];
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:(UITableViewRowAnimationFade)];
-                        
-                        [self show_Success:[NSString stringWithFormat:@"你获得%@",[responseObject[@"Text"]  isEqual: @"145"] ? @"10积分" : @"其他奖励"] delay:1];
-                    });
-                }
-                
-            } failure:^(NSError *error) {
-                [self show_Error:[NSString stringWithFormat:@"周抽奖--网络连接错误!!"] delay:1];
-            }];
-        });
-        
-        //获取积分
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [[HJHttpManager sharedInstance] requestJSONWithURL:kTotalBonus([NSDate currentTimestampStringWithType:(TimestampTypeMillisecond)]) type:(RequestTypeGet) paramObject:nil paramDictionary:nil progress:^(NSProgress *progress) {
-                
-            } success:^(id responseObject) {
-                NSString *total = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-                account.totalBonus = [NSString stringWithFormat:@"%@分", total];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [FMDBHandle updateAccountWith:account];
-                    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:(UITableViewRowAnimationFade)];
-                    
-                    [self show_Success:[NSString stringWithFormat:@"%@共有%@分", account.userName, total] delay:1];
-                });
-            } failure:^(NSError *error) {
-                
-            }];
-        });
-    });
+    //信号量
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
+    //串行队列
+    dispatch_queue_t queue = dispatch_queue_create("podinns", DISPATCH_QUEUE_SERIAL);
+    for (NSInteger i = 0; i <= self.accountA.count - 1; i++) {
+        [self startWithAccount:self.accountA[i] section:i queue:queue semaphore: semaphore];
+    }
+    self.isLoading = false;
 }
-// 登录
-- (void)loginWith:(AccountVo *)account group:(dispatch_group_t)group section:(NSInteger)section {
-    dispatch_group_enter(group);
+
+- (void)startWithAccount:(AccountVo *)account section:(NSInteger)section queue:(dispatch_queue_t)queue semaphore: semaphore {
+    __block BOOL isSuccess = false;
+    //登录
     [HJHttpManager requestSOAPData:kHOST soapBody:kLogin(account.userName, account.password, account.IsTravel) success:^(id responseObject) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if ([responseObject hasPrefix:@"OK"]) {
-                //成功
-                account.last_loginDate = [[NSDate date] stringWithFormatter:SQLDataFormatter];
-                account.isAvailable = 1;
-                self.isSuccess = true;
-                [FMDBHandle updateAccountWith:account];
+        if ([responseObject hasPrefix:@"OK"]) {
+            XHJLog(@"11111===登录成功");
+            //成功
+            account.last_loginDate = [[NSDate date] stringWithFormatter:SQLDataFormatter];
+            account.isAvailable = 1;
+            [FMDBHandle updateAccountWith:account];
+            dispatch_async(dispatch_get_main_queue(), ^{
                 [self show_Success:[NSString stringWithFormat:@"%@登陆成功", account.userName] delay:1];
-            } else {
-                //登录失败
+                [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationFade];
+            });
+            dispatch_semaphore_signal(semaphore);  //发送一个信
+        } else {
+            //登录失败
+            XHJLog(@"11111===登录失败");
+            dispatch_async(dispatch_get_main_queue(), ^{
                 [self show_Success:[NSString stringWithFormat:@"%@", responseObject] delay:1];
                 account.isAvailable = 0;
                 [FMDBHandle updateAccountWith:account];
                 [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:(UITableViewRowAnimationFade)];
-                self.isSuccess = false;
-            }
-            dispatch_group_leave(group);
-        });
+            });
+            dispatch_semaphore_signal(semaphore);  //发送一个信号
+        }
     } failure:^(NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self show_Success:@"网络状态错误, 请检查网络!" delay:1];
         });
-        self.isSuccess = false;
-        dispatch_group_leave(group);
+        XHJLog(@"11111===登录网络错误");
+        dispatch_semaphore_signal(semaphore);  //发送一个信号
     }];
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    
+
+    
+    
+    
+    /*
+     //登录
+     [HJHttpManager requestSOAPData:kHOST soapBody:kLogin(account.userName, account.password, account.IsTravel) success:^(id responseObject) {
+     if ([responseObject hasPrefix:@"OK"]) {
+     //成功
+     account.last_loginDate = [[NSDate date] stringWithFormatter:SQLDataFormatter];
+     account.isAvailable = 1;
+     self.isSuccess = true;
+     [FMDBHandle updateAccountWith:account];
+     dispatch_async(dispatch_get_main_queue(), ^{
+     [self show_Success:[NSString stringWithFormat:@"%@登陆成功", account.userName] delay:1];
+     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationFade];
+     });
+     
+     
+     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+     //判断是否签到过了
+     if (![NSDate dateFromString:account.last_signDate dateFormatter:SQLDataFormatter].isToday) {
+     //签到
+     [[HJHttpManager sharedInstance] synRequestJSONWithURL:kSign type:(RequestTypePost) paramObject:nil paramDictionary:nil progress:nil success:^(id responseObject) {
+     NSDictionary *dic = responseObject;
+     dispatch_async(dispatch_get_main_queue(), ^{
+     if ([dic[@"Text"] isEqualToString:@"OK"]) {
+     [self show_Success:[NSString stringWithFormat:@"%@签到成功", account.userName] delay:1];
+     } else {
+     [self show_Success:[NSString stringWithFormat:@"%@%@", account.userName, dic[@"Text"]] delay:1];
+     }
+     account.last_signDate = [[NSDate date] stringWithFormatter:SQLDataFormatter];
+     [FMDBHandle updateAccountWith:account];
+     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:(UITableViewRowAnimationFade)];
+     });
+     } failure:^(NSError *error) {
+     dispatch_async(dispatch_get_main_queue(), ^{
+     [self show_Error:[NSString stringWithFormat:@"签到--网络请求失败!!"] delay:1];
+     });
+     }];
+     } else {
+     dispatch_async(dispatch_get_main_queue(), ^{
+     [self show_Warning:[NSString stringWithFormat:@"%@今天已经签到过了", account.userName] delay:1];
+     });
+     }
+     });
+     
+     
+     //每日积分抽奖
+     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+     if (![NSDate dateFromString:account.last_lotteryDate dateFormatter:SQLDataFormatter].isToday) {
+     
+     [[HJHttpManager sharedInstance] synRequestJSONWithURL:kDayLottery type:(RequestTypePost) paramObject:nil paramDictionary:nil progress:nil success:^(id responseObject) {
+     account.last_lotteryDate = [[NSDate date] stringWithFormatter:SQLDataFormatter];
+     [FMDBHandle updateAccountWith:account];
+     dispatch_async(dispatch_get_main_queue(), ^{
+     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:(UITableViewRowAnimationFade)];
+     [self show_Success:[NSString stringWithFormat:@"你获得%@",responseObject[@"msg"]] delay:1];
+     });
+     } failure:^(NSError *error) {
+     dispatch_async(dispatch_get_main_queue(), ^{
+     [self show_Error:[NSString stringWithFormat:@"%@积分抽奖--网络请求失败!!", account.userName] delay:1];
+     });
+     }];
+     } else {
+     dispatch_async(dispatch_get_main_queue(), ^{
+     [self show_Warning:[NSString stringWithFormat:@"%@今天积分抽奖已经抽过了", account.userName] delay:1];
+     });
+     }
+     });
+     
+     
+     //周抽奖
+     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+     NSInteger day = [NSDate date].day;
+     NSInteger week = 0;
+     if (day >= 1 && day <= 7) {
+     week = 1;
+     } else if (day >= 8 && day <= 14) {
+     week = 2;
+     } else if (day >= 15 && day <= 21) {
+     week = 3;
+     } else if (day >= 22 && day <= 28) {
+     week = 4;
+     } else {
+     week = 4;
+     }
+     [[HJHttpManager sharedInstance] synRequestJSONWithURL:kWeekLottery(week) type:(RequestTypePost) paramObject:nil paramDictionary:nil progress:nil success:^(id responseObject) {
+     if ([[responseObject[@"Error"] stringValue] isEqual:@"1"]) {
+     dispatch_async(dispatch_get_main_queue(), ^{
+     [self show_Error:[NSString stringWithFormat:@"%@", responseObject[@"Text"]] delay:1];
+     if ([responseObject[@"Text"] isEqualToString:@"本周您已抽奖"]) {
+     account.last_weekLotteryDate = [[NSDate date] stringWithFormatter:SQLDataFormatter];
+     [FMDBHandle updateAccountWith:account];
+     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:(UITableViewRowAnimationFade)];
+     }
+     });
+     } else if ([[responseObject[@"Msg"] stringValue] isEqualToString:@"1"]) {
+     account.last_weekLotteryDate = [[NSDate date] stringWithFormatter:SQLDataFormatter];
+     [FMDBHandle updateAccountWith:account];
+     dispatch_async(dispatch_get_main_queue(), ^{
+     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:(UITableViewRowAnimationFade)];
+     [self show_Success:[NSString stringWithFormat:@"你获得%@",[responseObject[@"Text"]  isEqual: @"145"] ? @"10积分" : @"其他奖励"] delay:1];
+     });
+     }
+     
+     } failure:^(NSError *error) {
+     dispatch_async(dispatch_get_main_queue(), ^{
+     [self show_Error:[NSString stringWithFormat:@"周抽奖--网络连接错误!!"] delay:1];
+     });
+     }];
+     });
+     
+     //获取积分
+     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+     [[HJHttpManager sharedInstance] synRequestJSONWithURL:kTotalBonus([NSDate currentTimestampStringWithType:(TimestampTypeMillisecond)]) type:(RequestTypeGet) paramObject:nil paramDictionary:nil progress:nil success:^(id responseObject) {
+     NSString *total = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+     account.totalBonus = [NSString stringWithFormat:@"%@分", total];
+     [FMDBHandle updateAccountWith:account];
+     dispatch_async(dispatch_get_main_queue(), ^{
+     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:(UITableViewRowAnimationFade)];
+     [self show_Success:[NSString stringWithFormat:@"%@共有%@分", account.userName, total] delay:1];
+     });
+     } failure:^(NSError *error) {
+     dispatch_async(dispatch_get_main_queue(), ^{
+     [self show_Error:[NSString stringWithFormat:@"获取积分--网络连接错误!!"] delay:1];
+     });
+     }];
+     });
+     
+     } else {
+     //登录失败
+     dispatch_async(dispatch_get_main_queue(), ^{
+     [self show_Success:[NSString stringWithFormat:@"%@", responseObject] delay:1];
+     account.isAvailable = 0;
+     [FMDBHandle updateAccountWith:account];
+     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:(UITableViewRowAnimationFade)];
+     self.isSuccess = false;
+     });
+     }
+     } failure:^(NSError *error) {
+     dispatch_async(dispatch_get_main_queue(), ^{
+     [self show_Success:@"网络状态错误, 请检查网络!" delay:1];
+     });
+     }];
+     
+     */
 }
+
 - (void)addAccount:(UIButton *)button {
     [self.navigationController pushViewController:[[ManagerVController alloc] init] animated:true];
 }
@@ -215,22 +268,6 @@
         _accountA = [NSMutableArray array];
     }
     return _accountA;
-}
-- (UIButton *)startB {
-    if (!_startB) {
-        _startB = ({
-            UIButton *object = [UIButton buttonWithType:(UIButtonTypeCustom)];
-            [object setTitle:@"开始" forState:(UIControlStateNormal)];
-            object.titleLabel.font = [UIFont systemFontOfSize:15];
-            [object setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-            [object setBackgroundImage:[UIImage imageNamed:@"login_register_button"] forState:(UIControlStateNormal)];
-            [object setBackgroundImage:[UIImage imageNamed:@"login_register_button_click"] forState:(UIControlStateHighlighted)];
-            object.layer.cornerRadius = 5;
-            object.layer.masksToBounds = true;
-            object;
-        });
-    }
-    return _startB;
 }
 - (UITableView *)tableView {
     if (!_tableView) {
@@ -296,7 +333,11 @@
     headerView.account = account;
     __weak __typeof(self)weakself = self;
     [headerView setHeaderBlock:^(HJHeaderView *header) {
-        [weakself startLoginWith:account secion:section];
+        //        [weakself startLoginWith:account secion:section];
+        dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
+        //串行队列
+        dispatch_queue_t queue = dispatch_queue_create("podinns", DISPATCH_QUEUE_SERIAL);
+        [weakself startWithAccount:account section:section queue:queue semaphore:semaphore];
     }];
     return headerView;
 }

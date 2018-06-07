@@ -22,6 +22,7 @@
     if (headerView == nil) {
         headerView = [[self alloc] initWithReuseIdentifier:@"headerView"];
     }
+    headerView.frame = CGRectMake(0, 0, kMainScreenWidth, 44);
     return headerView;
 }
 
@@ -31,12 +32,14 @@
         [self.contentView addSubview:self.userNameL];
         [self.contentView addSubview:self.startB];
         [self.startB mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.bottom.right.mas_equalTo(UIEdgeInsetsMake(5, 0, 5, 15));
             make.width.mas_equalTo(80);
+            make.height.mas_equalTo(34);
+            make.right.mas_equalTo(self.contentView.mas_right).offset(-15);
+            make.centerY.mas_equalTo(self.contentView);
         }];
         [self.userNameL mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.top.bottom.mas_equalTo(UIEdgeInsetsMake(0, 15, 0, 0));
-            make.right.mas_equalTo(self.startB.mas_left).offset(-20);
+//            make.right.mas_equalTo(self.startB.mas_left).offset(-20);
         }];
         
         RAC(self.startB, enabled) = [RACSignal combineLatest:@[RACObserve(self, account.last_signDate), RACObserve(self, account.last_lotteryDate), RACObserve(self, account.last_weekLotteryDate)] reduce:^id (NSString *sign, NSString *lottery, NSString *week){

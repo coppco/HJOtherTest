@@ -36,6 +36,8 @@ typedef NS_ENUM(NSInteger, RequestType) {
  */
 - (void)requestJSONWithURL:(NSString *)urlString type:(RequestType)type paramObject:(NSObject *)object paramDictionary:(NSDictionary *)dic progress:(void (^)(NSProgress *progress))progress success:(void(^)(id responseObject))success failure:(void(^)(NSError *error))failure;
 
+- (void)requestJSONWithURL:(NSString *)urlString semaphore:(dispatch_semaphore_t)semaphore type:(RequestType)type paramObject:(NSObject *)object paramDictionary:(NSDictionary *)dic progress:(void (^)(NSProgress *progress))progress success:(void(^)(id responseObject))success failure:(void(^)(NSError *error))failure;
+
 
 /**
  post、get请求, 返回NSObject

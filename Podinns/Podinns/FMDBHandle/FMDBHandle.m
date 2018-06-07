@@ -8,7 +8,6 @@
 
 #import "FMDBHandle.h"
 
-
 static FMDatabaseQueue *databaseQueue = nil;
 static FMDatabase *database = nil;
 @implementation FMDBHandle

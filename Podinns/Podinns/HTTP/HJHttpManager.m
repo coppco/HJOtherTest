@@ -28,7 +28,7 @@ static HJHttpManager *httpManager = nil;
         [httpManager.requestSerializer setValue:@"application/json, text/html" forHTTPHeaderField:@"Accept"];
         [httpManager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/javascript", @"image/jpeg", @"image/png", @"application/octet-stream", nil]];
         //超时时间
-        httpManager.requestSerializer.timeoutInterval = 20;
+        httpManager.requestSerializer.timeoutInterval = 8;
     });
     return httpManager;
 }
@@ -49,6 +49,7 @@ static HJHttpManager *httpManager = nil;
         temp = object.mj_keyValues;
     }
     XHJLog(@"上传参数-------%@", temp);
+   
     switch (type) {
         case RequestTypeGet:
         {
@@ -57,6 +58,7 @@ static HJHttpManager *httpManager = nil;
                     progress(downloadProgress);
                 }
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                
                 if (success) {
                     success(responseObject);
                 }
@@ -87,6 +89,73 @@ static HJHttpManager *httpManager = nil;
                 }
                 XHJLog(@"请求失败-------%@", error.description);
             }];
+        }
+            break;
+    }
+    
+}
+
+- (void)requestJSONWithURL:(NSString *)urlString semaphore:(dispatch_semaphore_t)semaphore type:(RequestType)type paramObject:(NSObject *)object paramDictionary:(NSDictionary *)dic progress:(void (^)(NSProgress *progress))progress success:(void(^)(id responseObject))success failure:(void(^)(NSError *error))failure {
+    HJHttpManager *manager = [HJHttpManager sharedInstance];
+    if ([urlString containsString:@"GetUserFen"]) {
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    } else {
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    }
+    //去掉空字符串
+    urlString = [urlString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    //编码
+    urlString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSDictionary *temp = dic;
+    if (object != nil) {
+        temp = object.mj_keyValues;
+    }
+    XHJLog(@"上传参数-------%@", temp);
+    
+    switch (type) {
+        case RequestTypeGet:
+        {
+            [manager GET:urlString parameters:temp progress:^(NSProgress * _Nonnull downloadProgress) {
+                if (progress) {
+                    progress(downloadProgress);
+                }
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                if (success) {
+                    success(responseObject);
+                }
+                dispatch_semaphore_signal(semaphore);  //发送一个信号
+                XHJLog(@"请求成功-------%@", responseObject);
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                if (failure) {
+                    failure(error);
+                }
+                dispatch_semaphore_signal(semaphore);  //发送一个信号
+                XHJLog(@"请求失败-------%@", error.description);
+            }];
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        }
+            break;
+            
+        case RequestTypePost:
+        {
+            [manager POST:urlString parameters:temp progress:^(NSProgress * _Nonnull uploadProgress) {
+                if (progress) {
+                    progress(uploadProgress);
+                }
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                if (success) {
+                    success(responseObject);
+                }
+                dispatch_semaphore_signal(semaphore);  //发送一个信号
+                XHJLog(@"请求成功-------%@", responseObject);
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                if (failure) {
+                    failure(error);
+                }
+                dispatch_semaphore_signal(semaphore);  //发送一个信号
+                XHJLog(@"请求失败-------%@", error.description);
+            }];
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         }
             break;
     }
@@ -164,6 +233,8 @@ static HJHttpManager *httpManager = nil;
  */
 + (void)requestSOAPData:(NSString *)url soapBody:(NSDictionary *)bodyParams success:(void (^)(id responseObject))success failure:(void(^)(NSError *error))failure {
     
+
+    
     NSString *paramsStr = @"";
     
     for (NSString *key in bodyParams.allKeys) {
@@ -194,43 +265,27 @@ static HJHttpManager *httpManager = nil;
     [request addValue: msgLength forHTTPHeaderField:@"Content-Length"];
     
     [request setHTTPMethod:@"POST"];//因为body可能很长所以选择POST方式
-     
-     [request setHTTPBody: [soapStr dataUsingEncoding:NSUTF8StringEncoding]];
-     
-     NSURLSession *session = [NSURLSession sharedSession];
-     
-     //线程安全,显示小菊花作为网络的提示状态(HUDTool是对MBProgress进行了封装)
-//     dispatch_main_async_safe(^{
-//        
-//        AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-//        [HUDTool showToView:app.window];
-//        
-//    });
     
-     
-     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    [request setHTTPBody: [soapStr dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
-//        dispatch_main_async_safe(^{
-//            
-//            AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-//            [HUDTool hideForView:app.window];
-//            
-//        });
+        //        NSString *result212 = [[NSString alloc] initWithData:data  encoding:NSUTF8StringEncoding];
         
-//        NSString *result212 = [[NSString alloc] initWithData:data  encoding:NSUTF8StringEncoding];
-
         if (error) {
-//            NSLog(@"Session----失败----%@", error.localizedDescription);
+            //            NSLog(@"Session----失败----%@", error.localizedDescription);
             if (failure) {
-//                dispatch_main_async_safe(^{
-                    failure(error);
-//                });
+                //                dispatch_main_async_safe(^{
+                failure(error);
+                //                });
                 
             }
             
         }else{
             
-//            NSLog(@"进入成功回调Session-----结果：%@----请求地址：%@", result, response.URL);
+            //            NSLog(@"进入成功回调Session-----结果：%@----请求地址：%@", result, response.URL);
             
             NSError *error = nil;
             GDataXMLDocument *document = [[GDataXMLDocument alloc] initWithData:data options:0 error:nil];
@@ -247,39 +302,39 @@ static HJHttpManager *httpManager = nil;
             //3.第三层不同方法的Result解析
             GDataXMLElement *result=[[response elementsForName :[NSString stringWithFormat:@"%@Result",bodyParams[@"method"]]] objectAtIndex : 0 ];
             
-//            NSMutableDictionary *resultDic = [NSMutableDictionary dictionaryWithCapacity:1];
-//            
-//            NSArray *arr = result.children;
-//            
-//            if (result.childCount == 1) {
-//                
-//                [resultDic setValue:[result stringValue] forKey:@"result"];
+            //            NSMutableDictionary *resultDic = [NSMutableDictionary dictionaryWithCapacity:1];
+            //
+            //            NSArray *arr = result.children;
+            //
+            //            if (result.childCount == 1) {
+            //
+            //                [resultDic setValue:[result stringValue] forKey:@"result"];
             
-//            }else{
-//                
-//                for (GDataXMLElement *element in arr) {
-//                    
-//                    NSString *str = [[[result elementsForName:element.name] objectAtIndex : 0 ] stringValue ];
-//                    if (str != nil) {
-//                        [resultDic setValue:str forKey:element.name];
-//                    }
-//                    
-//                }
-//                
-//            }
+            //            }else{
+            //
+            //                for (GDataXMLElement *element in arr) {
+            //
+            //                    NSString *str = [[[result elementsForName:element.name] objectAtIndex : 0 ] stringValue ];
+            //                    if (str != nil) {
+            //                        [resultDic setValue:str forKey:element.name];
+            //                    }
+            //
+            //                }
+            //
+            //            }
             
-//            GDataXMLDocument *document = [[GDataXMLDocument alloc] initWithXMLString:result options:0 error:nil];
-//            GDataXMLElement *rootElement = [document rootElement];
-//            GDataXMLElement *result = [rootElement nodesForXPath:[NSString stringWithFormat:@"/%@Response/%@Result", bodyParams[@"method"], bodyParams[@"method"]] error:nil][0];
+            //            GDataXMLDocument *document = [[GDataXMLDocument alloc] initWithXMLString:result options:0 error:nil];
+            //            GDataXMLElement *rootElement = [document rootElement];
+            //            GDataXMLElement *result = [rootElement nodesForXPath:[NSString stringWithFormat:@"/%@Response/%@Result", bodyParams[@"method"], bodyParams[@"method"]] error:nil][0];
             if (success) {
-//                dispatch_main_async_safe(^{
-                    success([result stringValue]);
-//                });
+                //                dispatch_main_async_safe(^{
+                success([result stringValue]);
+                //                });
             }
         }
     }];
-     [task resume];
-     }
+    [task resume];
+}
 
 
 @end
